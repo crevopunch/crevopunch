@@ -1,5 +1,7 @@
 # Perp DEX / CEX fee research (as of 2026-11-24)
 
+**Status 2026-11-24:** Re-check attempted with WebFetch. All official hosts (binance.com, okx.com, bybit.com, kraken.com, hyperliquid.gitbook.io, docs.asterdex.com, docs.lighter.xyz, docs.dydx.xyz) still fail DNS resolution (`getaddrinfo ENOTFOUND`). No value in this file was confirmed; no "verified" tags added. Allow these hosts in the session network settings and re-run.
+
 **Method caveat:** Every direct WebFetch to an official host failed with a DNS error (`getaddrinfo ENOTFOUND`) for binance.com, bybit.com, okx.com, kraken.com, hyperliquid.gitbook.io, docs.asterdex.com, docs.lighter.xyz and docs.dydx.xyz. The session's network allowlist blocks them. All figures below therefore come from WebSearch excerpts whose source URLs are official domains. Nothing was read as a full page. Treat every number as "snippet, not fetched". Items marked UNVERIFIED conflict across sources or were not found in an official excerpt. Re-verify against live pages before relying on any of them. Allow these hosts in the session network settings to complete the research.
 
 ## Summary table

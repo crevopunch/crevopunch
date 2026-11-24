@@ -186,7 +186,7 @@ def cmd_funding():
         h = get(f'{OKX}/public/funding-rate-history?instId={sym}&limit=100')['data']
         pts = [(int(x['fundingTime']) / 1000, float(x.get('realizedRate') or x['fundingRate'])) for x in h]
         return c, float(d['fundingRate']), ih, pts
-    for c, r, ih, pts in pool_map(lambda c: safe(lambda: okx_one(c), ('OKX', c), (c, None, None, [])), sel):
+    for c, r, ih, pts in pool_map(lambda c: safe(lambda: okx_one(c), ('OKX', c), (c, None, None, [])), [c for c in sel if c in V['OKX']]):
         if r is None: continue
         cur[(c, 'OKX')] = (r, ih); hist[(c, 'OKX')] = [p for p in pts if p[0] >= since]
 

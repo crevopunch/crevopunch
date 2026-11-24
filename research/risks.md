@@ -2,6 +2,8 @@
 
 ## Method and limits (read first)
 
+- **Status 2026-11-24:** Re-check attempted with WebFetch. hyperliquid.gitbook.io, docs.asterdex.com, docs.lighter.xyz, docs.dydx.xyz and www.amf-france.org all fail DNS resolution (`getaddrinfo ENOTFOUND`). No ToS, restricted-jurisdiction page or AMF blacklist entry was read; the France status in section 1 is unchanged and still UNVERIFIED.
+
 - Research was done with WebSearch only. Every fetch attempt failed with DNS errors (defillama.com, www.theblock.co, coincentral.com, onekey.so, www.blockworks.com, www.coinperps.com). The tool reported these hosts as outside the session's allowed network domains, so no page was read in full. **All claims below come from search-result snippets and titles, not from the pages themselves.**
 - Most sources are secondary (crypto news, comparison sites, tax-software blogs). Primary sources (AMF, ESMA, venue ToS, DefiLlama, Hyperliquid docs) were not read.
 - Items marked **UNVERIFIED** are single-source, conflicting, or not researched. Dates below are the dates shown in snippets; "date n/s" means no date was shown.

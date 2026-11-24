@@ -2,3 +2,5 @@
 2026-11-24T23:28:34Z ERR ('OKX', 'XMR'): KeyError: 'XMR'
 2026-11-24T23:28:36Z ERR ('OKX', 'PAXG'): KeyError: 'PAXG'
 2026-11-24T23:28:37Z ERR ('OKX', 'MNT'): KeyError: 'MNT'
+2026-11-24T23:28:39Z ERR ('OKX', 'KAS'): KeyError: 'KAS'
+2026-11-24T23:29:04Z funding: 258 coin-venue current rates written to funding.csv
