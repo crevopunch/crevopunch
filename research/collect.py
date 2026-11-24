@@ -237,7 +237,8 @@ def cmd_funding():
         mid = V['Lighter'][c]['sym']
         rs = get(f'{LIGHTER}/fundings?market_id={mid}&resolution=1h&start_timestamp={int(since)}'
                  f'&end_timestamp={int(now_ts())}&count_back=200')['fundings']
-        return [(x['timestamp'], float(x['rate']) * (1 if x.get('direction') == 'long' else -1)) for x in rs]
+        # fundings 'rate' is in percent units (0.0012 = 0.0012%/h); convert to fraction
+        return [(x['timestamp'], float(x['rate']) / 100 * (1 if x.get('direction') == 'long' else -1)) for x in rs]
     for c in sel:
         if c in V['Lighter'] and V['Lighter'][c]['sym'] in lr:
             cur[(c, 'Lighter')] = (lr[V['Lighter'][c]['sym']], 1.0)
