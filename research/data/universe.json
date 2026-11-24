@@ -1,0 +1,1359 @@
+{
+ "selected": [
+  "BTC",
+  "ETH",
+  "BNB",
+  "XRP",
+  "SOL",
+  "TRX",
+  "HYPE",
+  "ZEC",
+  "XMR",
+  "DOGE",
+  "LINK",
+  "ADA",
+  "XLM",
+  "BCH",
+  "NEAR",
+  "LTC",
+  "CC",
+  "AVAX",
+  "UNI",
+  "GRAM",
+  "SUI",
+  "HBAR",
+  "QNT",
+  "TAO",
+  "SHIB",
+  "CRO",
+  "OKB",
+  "PAXG",
+  "PEPE",
+  "AAVE",
+  "ONDO",
+  "ENA",
+  "WLFI",
+  "ASTER",
+  "VVV",
+  "BTW",
+  "MNT",
+  "DOT",
+  "ICP",
+  "MORPHO",
+  "SKY",
+  "ETC",
+  "WLD",
+  "PUMP",
+  "PIEVERSE",
+  "NIGHT",
+  "POL",
+  "ARB",
+  "JUP",
+  "KAS"
+ ],
+ "venues": {
+  "OKX": {
+   "BTC": {
+    "sym": "BTC-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "ETH": {
+    "sym": "ETH-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.1
+   },
+   "BNB": {
+    "sym": "BNB-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "XRP": {
+    "sym": "XRP-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "SOL": {
+    "sym": "SOL-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": "TRX-USDT-SWAP",
+    "f": 1,
+    "ctv": 1000.0
+   },
+   "HYPE": {
+    "sym": "HYPE-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.1
+   },
+   "ZEC": {
+    "sym": "ZEC-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "DOGE": {
+    "sym": "DOGE-USDT-SWAP",
+    "f": 1,
+    "ctv": 1000.0
+   },
+   "LINK": {
+    "sym": "LINK-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": "ADA-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "XLM": {
+    "sym": "XLM-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "BCH": {
+    "sym": "BCH-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.1
+   },
+   "NEAR": {
+    "sym": "NEAR-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "LTC": {
+    "sym": "LTC-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "CC": {
+    "sym": "CC-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "AVAX": {
+    "sym": "AVAX-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": "UNI-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "GRAM": {
+    "sym": "GRAM-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": "SUI-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": "HBAR-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "QNT": {
+    "sym": "QNT-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": "TAO-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "SHIB": {
+    "sym": "SHIB-USDT-SWAP",
+    "f": 1,
+    "ctv": 1000000.0
+   },
+   "CRO": {
+    "sym": "CRO-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "OKB": {
+    "sym": "OKB-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "PEPE": {
+    "sym": "PEPE-USDT-SWAP",
+    "f": 1,
+    "ctv": 10000000.0
+   },
+   "AAVE": {
+    "sym": "AAVE-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.1
+   },
+   "ONDO": {
+    "sym": "ONDO-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "ENA": {
+    "sym": "ENA-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "WLFI": {
+    "sym": "WLFI-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "ASTER": {
+    "sym": "ASTER-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "VVV": {
+    "sym": "VVV-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.1
+   },
+   "BTW": {
+    "sym": "BTW-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": "DOT-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": "ICP-USDT-SWAP",
+    "f": 1,
+    "ctv": 0.01
+   },
+   "MORPHO": {
+    "sym": "MORPHO-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SKY": {
+    "sym": "SKY-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "ETC": {
+    "sym": "ETC-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "WLD": {
+    "sym": "WLD-USDT-SWAP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": "PUMP-USDT-SWAP",
+    "f": 1,
+    "ctv": 1000.0
+   },
+   "PIEVERSE": {
+    "sym": "PIEVERSE-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "NIGHT": {
+    "sym": "NIGHT-USDT-SWAP",
+    "f": 1,
+    "ctv": 100.0
+   },
+   "POL": {
+    "sym": "POL-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "ARB": {
+    "sym": "ARB-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   },
+   "JUP": {
+    "sym": "JUP-USDT-SWAP",
+    "f": 1,
+    "ctv": 10.0
+   }
+  },
+  "Kraken": {
+   "BTC": {
+    "sym": "PF_XBTUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETH": {
+    "sym": "PF_ETHUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BNB": {
+    "sym": "PF_BNBUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XRP": {
+    "sym": "PF_XRPUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SOL": {
+    "sym": "PF_SOLUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": "PF_TRXUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HYPE": {
+    "sym": "PF_HYPEUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ZEC": {
+    "sym": "PF_ZECUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XMR": {
+    "sym": "PF_XMRUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOGE": {
+    "sym": "PF_DOGEUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LINK": {
+    "sym": "PF_LINKUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": "PF_ADAUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XLM": {
+    "sym": "PF_XLMUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BCH": {
+    "sym": "PF_BCHUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NEAR": {
+    "sym": "PF_NEARUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LTC": {
+    "sym": "PF_LTCUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AVAX": {
+    "sym": "PF_AVAXUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": "PF_UNIUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": "PF_SUIUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": "PF_HBARUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "QNT": {
+    "sym": "PF_QNTUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": "PF_TAOUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SHIB": {
+    "sym": "PF_SHIBUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "CRO": {
+    "sym": "PF_CROUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PAXG": {
+    "sym": "PF_PAXGUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PEPE": {
+    "sym": "PF_PEPEUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AAVE": {
+    "sym": "PF_AAVEUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ONDO": {
+    "sym": "PF_ONDOUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ENA": {
+    "sym": "PF_ENAUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLFI": {
+    "sym": "PF_WLFIUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ASTER": {
+    "sym": "PF_ASTERUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MNT": {
+    "sym": "PF_MNTUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": "PF_DOTUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": "PF_ICPUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MORPHO": {
+    "sym": "PF_MORPHOUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETC": {
+    "sym": "PF_ETCUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLD": {
+    "sym": "PF_WLDUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": "PF_PUMPUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NIGHT": {
+    "sym": "PF_NIGHTUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "POL": {
+    "sym": "PF_POLUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ARB": {
+    "sym": "PF_ARBUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "JUP": {
+    "sym": "PF_JUPUSD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "KAS": {
+    "sym": "PF_KASUSD",
+    "f": 1,
+    "ctv": 1.0
+   }
+  },
+  "Hyperliquid": {
+   "BTC": {
+    "sym": "BTC",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETH": {
+    "sym": "ETH",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BNB": {
+    "sym": "BNB",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XRP": {
+    "sym": "XRP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SOL": {
+    "sym": "SOL",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": "TRX",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HYPE": {
+    "sym": "HYPE",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ZEC": {
+    "sym": "ZEC",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XMR": {
+    "sym": "XMR",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOGE": {
+    "sym": "DOGE",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LINK": {
+    "sym": "LINK",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": "ADA",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XLM": {
+    "sym": "XLM",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BCH": {
+    "sym": "BCH",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NEAR": {
+    "sym": "NEAR",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LTC": {
+    "sym": "LTC",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "CC": {
+    "sym": "CC",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AVAX": {
+    "sym": "AVAX",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": "UNI",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "GRAM": {
+    "sym": "GRAM",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": "SUI",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": "HBAR",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": "TAO",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SHIB": {
+    "sym": "kSHIB",
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "PAXG": {
+    "sym": "PAXG",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PEPE": {
+    "sym": "kPEPE",
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "AAVE": {
+    "sym": "AAVE",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ONDO": {
+    "sym": "ONDO",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ENA": {
+    "sym": "ENA",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLFI": {
+    "sym": "WLFI",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ASTER": {
+    "sym": "ASTER",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "VVV": {
+    "sym": "VVV",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MNT": {
+    "sym": "MNT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": "DOT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": "ICP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MORPHO": {
+    "sym": "MORPHO",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SKY": {
+    "sym": "SKY",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETC": {
+    "sym": "ETC",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLD": {
+    "sym": "WLD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": "PUMP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "POL": {
+    "sym": "POL",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ARB": {
+    "sym": "ARB",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "JUP": {
+    "sym": "JUP",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "KAS": {
+    "sym": "KAS",
+    "f": 1,
+    "ctv": 1.0
+   }
+  },
+  "Aster": {
+   "BTC": {
+    "sym": "BTCUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETH": {
+    "sym": "ETHUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BNB": {
+    "sym": "BNBUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XRP": {
+    "sym": "XRPUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SOL": {
+    "sym": "SOLUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": "TRXUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HYPE": {
+    "sym": "HYPEUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ZEC": {
+    "sym": "ZECUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XMR": {
+    "sym": "XMRUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOGE": {
+    "sym": "DOGEUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LINK": {
+    "sym": "LINKUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": "ADAUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XLM": {
+    "sym": "XLMUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BCH": {
+    "sym": "BCHUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NEAR": {
+    "sym": "NEARUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LTC": {
+    "sym": "LTCUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "CC": {
+    "sym": "CCUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AVAX": {
+    "sym": "AVAXUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": "UNIUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "GRAM": {
+    "sym": "GRAMUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": "SUIUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": "HBARUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "QNT": {
+    "sym": "QNTUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": "TAOUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SHIB": {
+    "sym": "1000SHIBUSDT",
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "OKB": {
+    "sym": "OKBUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PAXG": {
+    "sym": "PAXGUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PEPE": {
+    "sym": "1000PEPEUSDT",
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "AAVE": {
+    "sym": "AAVEUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ONDO": {
+    "sym": "ONDOUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ENA": {
+    "sym": "ENAUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLFI": {
+    "sym": "WLFIUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ASTER": {
+    "sym": "ASTERUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "VVV": {
+    "sym": "VVVUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BTW": {
+    "sym": "BTWUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": "DOTUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": "ICPUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MORPHO": {
+    "sym": "MORPHOUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SKY": {
+    "sym": "SKYUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETC": {
+    "sym": "ETCUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLD": {
+    "sym": "WLDUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": "PUMPUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PIEVERSE": {
+    "sym": "PIEVERSEUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NIGHT": {
+    "sym": "NIGHTUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "POL": {
+    "sym": "POLUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ARB": {
+    "sym": "ARBUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "JUP": {
+    "sym": "JUPUSDT",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "KAS": {
+    "sym": "KASUSDT",
+    "f": 1,
+    "ctv": 1.0
+   }
+  },
+  "Lighter": {
+   "BTC": {
+    "sym": 1,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETH": {
+    "sym": 0,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BNB": {
+    "sym": 25,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XRP": {
+    "sym": 7,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SOL": {
+    "sym": 2,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": 43,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HYPE": {
+    "sym": 24,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ZEC": {
+    "sym": 90,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XMR": {
+    "sym": 77,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOGE": {
+    "sym": 3,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LINK": {
+    "sym": 8,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": 39,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XLM": {
+    "sym": 119,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BCH": {
+    "sym": 58,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NEAR": {
+    "sym": 10,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LTC": {
+    "sym": 35,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "CC": {
+    "sym": 101,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AVAX": {
+    "sym": 9,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": 30,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "GRAM": {
+    "sym": 12,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": 16,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": 59,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "QNT": {
+    "sym": 190,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": 13,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SHIB": {
+    "sym": 17,
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "CRO": {
+    "sym": 73,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PAXG": {
+    "sym": 48,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PEPE": {
+    "sym": 4,
+    "f": 1000,
+    "ctv": 1.0
+   },
+   "AAVE": {
+    "sym": 27,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ONDO": {
+    "sym": 38,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ENA": {
+    "sym": 29,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLFI": {
+    "sym": 72,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ASTER": {
+    "sym": 83,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "VVV": {
+    "sym": 69,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MNT": {
+    "sym": 63,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": 11,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": 102,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "MORPHO": {
+    "sym": 68,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SKY": {
+    "sym": 79,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLD": {
+    "sym": 6,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": 45,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "POL": {
+    "sym": 14,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ARB": {
+    "sym": 50,
+    "f": 1,
+    "ctv": 1.0
+   },
+   "JUP": {
+    "sym": 26,
+    "f": 1,
+    "ctv": 1.0
+   }
+  },
+  "dYdX": {
+   "BTC": {
+    "sym": "BTC-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETH": {
+    "sym": "ETH-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BNB": {
+    "sym": "BNB-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XRP": {
+    "sym": "XRP-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SOL": {
+    "sym": "SOL-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TRX": {
+    "sym": "TRX-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HYPE": {
+    "sym": "HYPE-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ZEC": {
+    "sym": "ZEC-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XMR": {
+    "sym": "XMR-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOGE": {
+    "sym": "DOGE-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LINK": {
+    "sym": "LINK-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ADA": {
+    "sym": "ADA-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "XLM": {
+    "sym": "XLM-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "BCH": {
+    "sym": "BCH-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "NEAR": {
+    "sym": "NEAR-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "LTC": {
+    "sym": "LTC-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AVAX": {
+    "sym": "AVAX-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "UNI": {
+    "sym": "UNI-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "SUI": {
+    "sym": "SUI-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "HBAR": {
+    "sym": "HBAR-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "TAO": {
+    "sym": "TAO-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PAXG": {
+    "sym": "PAXG-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PEPE": {
+    "sym": "PEPE-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "AAVE": {
+    "sym": "AAVE-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ASTER": {
+    "sym": "ASTER-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "DOT": {
+    "sym": "DOT-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ICP": {
+    "sym": "ICP-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ETC": {
+    "sym": "ETC-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "WLD": {
+    "sym": "WLD-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "PUMP": {
+    "sym": "PUMP-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "POL": {
+    "sym": "POL-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "ARB": {
+    "sym": "ARB-USD",
+    "f": 1,
+    "ctv": 1.0
+   },
+   "JUP": {
+    "sym": "JUP-USD",
+    "f": 1,
+    "ctv": 1.0
+   }
+  }
+ },
+ "generated_utc": "2026-11-24T23:28:29Z"
+}
