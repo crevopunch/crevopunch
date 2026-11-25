@@ -1,0 +1,590 @@
+{
+ "window_start_utc": "2024-11-25T00:00Z",
+ "window_end_utc": "2026-11-25T00:00Z",
+ "coins": {
+  "BTC": {
+   "hl_name": "BTC",
+   "price_scale": 1.0,
+   "hl_max_leverage": 40,
+   "kraken_symbol": "PF_XBTUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "ETH": {
+   "hl_name": "ETH",
+   "price_scale": 1.0,
+   "hl_max_leverage": 25,
+   "kraken_symbol": "PF_ETHUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "SOL": {
+   "hl_name": "SOL",
+   "price_scale": 1.0,
+   "hl_max_leverage": 20,
+   "kraken_symbol": "PF_SOLUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "XRP": {
+   "hl_name": "XRP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 20,
+   "kraken_symbol": "PF_XRPUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "DOGE": {
+   "hl_name": "DOGE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_DOGEUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "PEPE": {
+   "hl_name": "kPEPE",
+   "price_scale": 0.001,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_PEPEUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "KAS": {
+   "hl_name": "KAS",
+   "price_scale": 1.0,
+   "hl_max_leverage": 3,
+   "kraken_symbol": "PF_KASUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "SUI": {
+   "hl_name": "SUI",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_SUIUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "LINK": {
+   "hl_name": "LINK",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_LINKUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "AVAX": {
+   "hl_name": "AVAX",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_AVAXUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "BNB": {
+   "hl_name": "BNB",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_BNBUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "TRX": {
+   "hl_name": "TRX",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_TRXUSD",
+   "complete_hours": 4991,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "HYPE": {
+   "hl_name": "HYPE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_HYPEUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "ZEC": {
+   "hl_name": "ZEC",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_ZECUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "XMR": {
+   "hl_name": "XMR",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_XMRUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "ADA": {
+   "hl_name": "ADA",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_ADAUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "XLM": {
+   "hl_name": "XLM",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_XLMUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "BCH": {
+   "hl_name": "BCH",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_BCHUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "NEAR": {
+   "hl_name": "NEAR",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_NEARUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "LTC": {
+   "hl_name": "LTC",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_LTCUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "UNI": {
+   "hl_name": "UNI",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_UNIUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "HBAR": {
+   "hl_name": "HBAR",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_HBARUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "TAO": {
+   "hl_name": "TAO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_TAOUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "SHIB": {
+   "hl_name": "kSHIB",
+   "price_scale": 0.001,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_SHIBUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "PAXG": {
+   "hl_name": "PAXG",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_PAXGUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "AAVE": {
+   "hl_name": "AAVE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_AAVEUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "ONDO": {
+   "hl_name": "ONDO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_ONDOUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "ENA": {
+   "hl_name": "ENA",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_ENAUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "WLFI": {
+   "hl_name": "WLFI",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_WLFIUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "ASTER": {
+   "hl_name": "ASTER",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ASTERUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "MNT": {
+   "hl_name": "MNT",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_MNTUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "DOT": {
+   "hl_name": "DOT",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_DOTUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "ICP": {
+   "hl_name": "ICP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ICPUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "MORPHO": {
+   "hl_name": "MORPHO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_MORPHOUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "ETC": {
+   "hl_name": "ETC",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ETCUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "WLD": {
+   "hl_name": "WLD",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_WLDUSD",
+   "complete_hours": 4991,
+   "first_complete_utc": "2026-05-01T00:00Z"
+  },
+  "PUMP": {
+   "hl_name": "PUMP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_PUMPUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "POL": {
+   "hl_name": "POL",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_POLUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "ARB": {
+   "hl_name": "ARB",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_ARBUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "JUP": {
+   "hl_name": "JUP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_JUPUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "ALGO": {
+   "hl_name": "ALGO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ALGOUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "RENDER": {
+   "hl_name": "RENDER",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_RENDERUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "ATOM": {
+   "hl_name": "ATOM",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ATOMUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "INJ": {
+   "hl_name": "INJ",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_INJUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "STX": {
+   "hl_name": "STX",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_STXUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "CAKE": {
+   "hl_name": "CAKE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 3,
+   "kraken_symbol": "PF_CAKEUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "ETHFI": {
+   "hl_name": "ETHFI",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ETHFIUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "FIL": {
+   "hl_name": "FIL",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_FILUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "DASH": {
+   "hl_name": "DASH",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_DASHUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "ZRO": {
+   "hl_name": "ZRO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ZROUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "PYTH": {
+   "hl_name": "PYTH",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_PYTHUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "APT": {
+   "hl_name": "APT",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_APTUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "TIA": {
+   "hl_name": "TIA",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_TIAUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "CRV": {
+   "hl_name": "CRV",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_CRVUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "PENGU": {
+   "hl_name": "PENGU",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_PENGUUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "GRASS": {
+   "hl_name": "GRASS",
+   "price_scale": 1.0,
+   "hl_max_leverage": 3,
+   "kraken_symbol": "PF_GRASSUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "SPX": {
+   "hl_name": "SPX",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_SPXUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "FET": {
+   "hl_name": "FET",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_FETUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "TRUMP": {
+   "hl_name": "TRUMP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_TRUMPUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "STRK": {
+   "hl_name": "STRK",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_STRKUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "VIRTUAL": {
+   "hl_name": "VIRTUAL",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_VIRTUALUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "SEI": {
+   "hl_name": "SEI",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_SEIUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "PENDLE": {
+   "hl_name": "PENDLE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_PENDLEUSD",
+   "complete_hours": 4994,
+   "first_complete_utc": "2026-04-30T21:00Z"
+  },
+  "XPL": {
+   "hl_name": "XPL",
+   "price_scale": 1.0,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_XPLUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "LDO": {
+   "hl_name": "LDO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_LDOUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "BONK": {
+   "hl_name": "kBONK",
+   "price_scale": 0.001,
+   "hl_max_leverage": 10,
+   "kraken_symbol": "PF_BONKUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "COMP": {
+   "hl_name": "COMP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_COMPUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "RUNE": {
+   "hl_name": "RUNE",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_RUNEUSD",
+   "complete_hours": 4995,
+   "first_complete_utc": "2026-04-30T20:00Z"
+  },
+  "CFX": {
+   "hl_name": "CFX",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_CFXUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "OP": {
+   "hl_name": "OP",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_OPUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "FLOKI": {
+   "hl_name": "kFLOKI",
+   "price_scale": 0.001,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_FLOKIUSD",
+   "complete_hours": 4992,
+   "first_complete_utc": "2026-04-30T23:00Z"
+  },
+  "ENS": {
+   "hl_name": "ENS",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_ENSUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  },
+  "JTO": {
+   "hl_name": "JTO",
+   "price_scale": 1.0,
+   "hl_max_leverage": 5,
+   "kraken_symbol": "PF_JTOUSD",
+   "complete_hours": 4993,
+   "first_complete_utc": "2026-04-30T22:00Z"
+  }
+ }
+}

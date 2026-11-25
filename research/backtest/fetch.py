@@ -10,6 +10,7 @@ import datetime as dt
 import json
 import os
 import ssl
+import sys
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -96,19 +97,44 @@ def hl_funding(name):
 
 
 def hl_candles(name, mult):
-    out, t, t1 = {}, START_S * 1000, END_S * 1000
-    while t < t1:
+    # candleSnapshot returns the latest <=5000 candles before endTime, so page backwards from END.
+    out, t_end, t0 = {}, END_S * 1000, START_S * 1000
+    while True:
         rows = call(HL_URL, {'type': 'candleSnapshot',
-                             'req': {'coin': name, 'interval': '1h', 'startTime': t, 'endTime': t1}})
+                             'req': {'coin': name, 'interval': '1h', 'startTime': t0, 'endTime': t_end}})
         if not rows:
             break
         for r in rows:
             out[int(r['t']) // (H * 1000)] = (float(r['c']) * mult, float(r['h']) * mult, float(r['l']) * mult)
-        last = int(rows[-1]['t'])
-        if len(rows) < 5000:
+        earliest = min(int(r['t']) for r in rows)
+        if len(rows) < 5000 or earliest <= t0:
             break
-        t = last + H * 1000
+        t_end = earliest - 1
     return out
+
+
+def repair_hl():
+    """Rewrite only the hl_close/hl_high/hl_low columns of existing per-coin CSVs."""
+    meta = json.load(open(os.path.join(DATA, 'meta.json')))['coins']
+    for coin, m in meta.items():
+        if 'skipped' in m:
+            continue
+        path = os.path.join(DATA, f'{coin}.csv')
+        with open(path) as f:
+            rows = list(csv.reader(f))
+        hc = hl_candles(m['hl_name'], m['price_scale'])
+        for i, row in enumerate(rows[1:], start=1):
+            hr = int(dt.datetime.strptime(row[0], '%Y-%m-%dT%H:%MZ').replace(
+                tzinfo=dt.timezone.utc).timestamp()) // H
+            c = hc.get(hr)
+            row[1:4] = [repr(x) for x in c] if c else ['', '', '']
+        with open(path, 'w', newline='') as f:
+            csv.writer(f).writerows(rows)
+        m['complete_hours'] = sum(1 for r in rows[1:] if all(x != '' for x in r[1:]))
+        print(coin, 'hl candles', len(hc), 'complete', m['complete_hours'], flush=True)
+    with open(os.path.join(DATA, 'meta.json'), 'w') as f:
+        json.dump({'window_start_utc': '2024-11-25T00:00Z', 'window_end_utc': '2026-11-25T00:00Z',
+                   'coins': meta}, f, indent=1)
 
 
 def kr_funding(sym):
@@ -171,6 +197,9 @@ def fetch_one(coin, hn, mult, ks, max_lev):
 
 
 def main():
+    if '--repair-hl' in sys.argv:
+        repair_hl()
+        return
     os.makedirs(DATA, exist_ok=True)
     uni, krs = hl_universe(), kr_symbols()
     meta, jobs = {}, []
