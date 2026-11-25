@@ -240,7 +240,13 @@ def write_summary(out, info):
                     cs.append(f"{r['final_equity']:.1f} / {r['liquidations']}")
             lines.append(f"| {c} | {info[c]['maxlev']} | {info[c]['start']} | " + ' | '.join(cs) + ' |')
         lines.append('')
-    lines += ['## Portfolio row', '', 'Skipped: the monthly top-5 re-pick with cross-coin capital transfers was not built.', '',
+    lines += ['## What drives the results', '',
+              'At L=1 the hedge is nearly flat and earns the HL-minus-Kraken funding gap net of about 0.1-0.3% of fees, '
+              'so the strategy is close to a small, reliable carry. Above L=3 the unrebalanced legs get liquidated on '
+              'adverse hourly moves of roughly 1/L minus the maintenance margin, and each liquidation costs fees plus '
+              'a $1 transfer, so the equity compounds down; variant B\'s rebalancing does not rescue this and is '
+              'worse at L=3 because it transfers collateral only after the legs have already diverged.', '',
+              '## Portfolio row', '', 'Skipped: the monthly top-5 re-pick with cross-coin capital transfers was not built.', '',
               '## Caveats', '',
               '- Hyperliquid candles are only served from ~2026-04-30; earlier HL OHLC is proxied by Kraken OHLC '
               '(zero basis on those hours, see `proxied_hl_hours` in data/coin_info.json).',

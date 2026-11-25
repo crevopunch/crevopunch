@@ -155,6 +155,10 @@ Cell = final total equity in $ (start $200) / liquidations. N/A = L above the HL
 | ENS | 5 | 2025-11-26 | 202.9 / 0 | 30.0 / 9 | 19.7 / 7 | N/A (max 5x) | N/A (max 5x) |
 | JTO | 5 | 2025-11-26 | 206.0 / 0 | 17.2 / 13 | 16.7 / 8 | N/A (max 5x) | N/A (max 5x) |
 
+## What drives the results
+
+At L=1 the hedge is nearly flat and earns the HL-minus-Kraken funding gap net of about 0.1-0.3% of fees, so the strategy is close to a small, reliable carry. Above L=3 the unrebalanced legs get liquidated on adverse hourly moves of roughly 1/L minus the maintenance margin, and each liquidation costs fees plus a $1 transfer, so the equity compounds down; variant B's rebalancing does not rescue this and is worse at L=3 because it transfers collateral only after the legs have already diverged.
+
 ## Portfolio row
 
 Skipped: the monthly top-5 re-pick with cross-coin capital transfers was not built.
