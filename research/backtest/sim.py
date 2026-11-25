@@ -33,15 +33,22 @@ def slip(coin):
 
 
 def load(coin):
-    rows = []
+    """Hours with both funding rates and Kraken prices. Hyperliquid candles only exist from
+    ~2026-04-30 (API depth limit), so earlier HL OHLC is proxied by Kraken OHLC (flag: proxied)."""
+    rows, proxied = [], 0
     with open(os.path.join(DATA, f'{coin}.csv')) as f:
         for r in csv.DictReader(f):
-            try:
-                v = [float(r[k]) for k in ('hl_close', 'hl_high', 'hl_low', 'hl_funding',
-                                           'kr_close', 'kr_high', 'kr_low', 'kr_funding')]
-            except ValueError:
-                continue  # incomplete hour: dropped (counted in main)
-            rows.append((r['hour_utc'], *v))
+            if r['hl_funding'] == '' or r['kr_funding'] == '' or r['kr_close'] == '':
+                continue
+            kr = [float(r['kr_close']), float(r['kr_high']), float(r['kr_low'])]
+            if r['hl_close'] == '':
+                hl = kr
+                proxied += 1
+            else:
+                hl = [float(r['hl_close']), float(r['hl_high']), float(r['hl_low'])]
+            rows.append((r['hour_utc'], hl[0], hl[1], hl[2], float(r['hl_funding']),
+                         kr[0], kr[1], kr[2], float(r['kr_funding'])))
+    load.proxied = proxied
     return rows
 
 
@@ -210,6 +217,40 @@ def simulate(rows, coin, maxlev, L, variant):
     }
 
 
+def write_summary(out, info):
+    """summary.md: per variant, rows = coins, columns = L; cell = final equity / liquidations."""
+    cells = {(r['coin'], r['variant'], r['L']): r for r in out}
+    coins = [c for c in info if 'skip' not in info[c]]
+    lines = ['# Cross-venue funding carry: 2-year backtest summary', '',
+             'Window: trading from 2025-11-26 to 2026-11-24 (~12 months). Kraken funding history only goes back to '
+             '2025-11-19, so the 2-year window is not achievable; 7-day warm-up is taken from that start.',
+             'Cell = final total equity in $ (start $200) / liquidations. N/A = L above the HL max leverage.', '']
+    for v in VARIANTS:
+        name = 'A (no rebalancing)' if v == 'A' else 'B (rebalancing + monthly re-size)'
+        lines += [f'## Variant {name}', '',
+                  '| coin | HL maxLev | start | ' + ' | '.join(f'L={L}' for L in LEVS) + ' |',
+                  '|---|---|---|' + '---|' * len(LEVS)]
+        for c in coins:
+            cs = []
+            for L in LEVS:
+                r = cells.get((c, v, L))
+                if r is None or r['status'] != 'ok':
+                    cs.append(r['status'] if r else 'n/a')
+                else:
+                    cs.append(f"{r['final_equity']:.1f} / {r['liquidations']}")
+            lines.append(f"| {c} | {info[c]['maxlev']} | {info[c]['start']} | " + ' | '.join(cs) + ' |')
+        lines.append('')
+    lines += ['## Portfolio row', '', 'Skipped: the monthly top-5 re-pick with cross-coin capital transfers was not built.', '',
+              '## Caveats', '',
+              '- Hyperliquid candles are only served from ~2026-04-30; earlier HL OHLC is proxied by Kraken OHLC '
+              '(zero basis on those hours, see `proxied_hl_hours` in data/coin_info.json).',
+              '- Position sizes are in units fixed at open; funding accrues on the mark (venue close).',
+              '- Liquidation is checked on each venue\'s hourly high/low against maintenance margin 1/(2 x HL maxLev).',
+              '- No exit cost on the final mark-to-market equity; no funding-rate caps; no slippage beyond the flat bps.']
+    with open(os.path.join(BASE, 'summary.md'), 'w') as f:
+        f.write('\n'.join(lines) + '\n')
+
+
 def main():
     meta = json.load(open(os.path.join(DATA, 'meta.json')))['coins']
     out, info = [], {}
@@ -218,12 +259,11 @@ def main():
             info[coin] = {'skip': m['skipped']}
             continue
         rows = load(coin)
-        dropped = m['complete_hours'] and (sum(1 for _ in open(os.path.join(DATA, f'{coin}.csv'))) - 1 - len(rows))
         if len(rows) < MIN_HOURS:
             info[coin] = {'skip': f'<12m overlap ({len(rows)} h)'}
             continue
         info[coin] = {'hours': len(rows), 'start': rows[WARM - 1][0][:10], 'maxlev': m['hl_max_leverage'],
-                      'dropped_incomplete': dropped}
+                      'proxied_hl_hours': load.proxied, 'first_hour': rows[0][0][:10]}
         # sanity: annualised funding by venue
         fH = [r[4] for r in rows]; fK = [r[8] for r in rows]
         info[coin]['ann_hl_pct'] = 100 * HPY * sum(fH) / len(fH)
@@ -245,13 +285,14 @@ def main():
         for r in out:
             w.writerow({k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()})
     json.dump(info, open(os.path.join(BASE, 'data', 'coin_info.json'), 'w'), indent=1)
+    write_summary(out, info)
     # compact print
     for coin, d in info.items():
         if 'skip' in d:
             print(coin, 'SKIP', d['skip'])
         else:
-            print(f"{coin:5} start={d['start']} hrs={d['hours']} maxLev={d['maxlev']} "
-                  f"annFund HL={d['ann_hl_pct']:.1f}% KR={d['ann_kr_pct']:.1f}% dropped={d['dropped_incomplete']}")
+            print(f"{coin:6} start={d['start']} hrs={d['hours']} maxLev={d['maxlev']:>2} proxied={d['proxied_hl_hours']} "
+                  f"annFund HL={d['ann_hl_pct']:6.1f}% KR={d['ann_kr_pct']:6.1f}%")
 
 
 if __name__ == '__main__':

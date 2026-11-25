@@ -1,3 +1,14 @@
+# Simulation C: the lighter version (run before D)
+
+Venues: Hyperliquid + Kraken only, same coins as A/B. Turn on only these rules from D below:
+- rule 1 (maker entry on one leg);
+- rule 6 (rotation), restricted to the HL–Kraken coins, top-1 only, with the switch rule from rule 3;
+- rule 11 (close before liquidation);
+- rule 12 (volatility-adjusted leverage);
+- rule 13 (compounding).
+
+Everything else works as in variant B. Run it with caps {3, 5, 10, 20} and write `results_C.csv`. Include C in the side-by-side comparison of A/B/C/D.
+
 # Simulation D: the "everything on" carry bot
 
 Same window, data conventions and cost model as A/B (2024-11-25 → 2026-11-24, hourly), except for the changes below. **No lookahead:** every signal uses only data available up to that hour.

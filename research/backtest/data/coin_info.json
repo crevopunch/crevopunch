@@ -1,0 +1,647 @@
+{
+ "BTC": {
+  "hours": 8890,
+  "start": "2025-11-26",
+  "maxlev": 40,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.6936080368054,
+  "ann_kr_pct": 3.6449623476899466
+ },
+ "ETH": {
+  "hours": 8890,
+  "start": "2025-11-26",
+  "maxlev": 25,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.112851546546682,
+  "ann_kr_pct": 3.592994297207967
+ },
+ "SOL": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 20,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.9389686948599708,
+  "ann_kr_pct": 0.3102655647958569
+ },
+ "XRP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 20,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 3.088608741243955,
+  "ann_kr_pct": 0.7464201206489833
+ },
+ "DOGE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.784541235766507,
+  "ann_kr_pct": 1.918031002897603
+ },
+ "PEPE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.639888836621302,
+  "ann_kr_pct": -3.8035904057846803
+ },
+ "KAS": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 3,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 4.98518450639973,
+  "ann_kr_pct": 1.471403811577504
+ },
+ "SUI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.113789139264425,
+  "ann_kr_pct": 0.6728608907904201
+ },
+ "LINK": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.304647448026094,
+  "ann_kr_pct": 0.8169655230009909
+ },
+ "AVAX": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 3.5322970759644585,
+  "ann_kr_pct": -3.5446776216365685
+ },
+ "BNB": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.080440685412215,
+  "ann_kr_pct": 2.6787381812356497
+ },
+ "TRX": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3900,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -6.07221341873805,
+  "ann_kr_pct": -9.454871058846233
+ },
+ "HYPE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.648509449465752,
+  "ann_kr_pct": 6.807292715462339
+ },
+ "ZEC": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.000842533078394,
+  "ann_kr_pct": -2.001490945421615
+ },
+ "XMR": {
+  "skip": "<12m overlap (7524 h)"
+ },
+ "ADA": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -2.3430121939489372,
+  "ann_kr_pct": -2.449496740229899
+ },
+ "XLM": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 1.9970919915420093,
+  "ann_kr_pct": -1.4870454151887282
+ },
+ "BCH": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 1.6954029218310651,
+  "ann_kr_pct": -2.0538756532805427
+ },
+ "NEAR": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 10.691670181396919,
+  "ann_kr_pct": -2.5100067301918143
+ },
+ "LTC": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.5192731169497256,
+  "ann_kr_pct": -1.0749430535216773
+ },
+ "UNI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 8.798099881498144,
+  "ann_kr_pct": -1.7348560914524898
+ },
+ "HBAR": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.9727413399167695,
+  "ann_kr_pct": -1.8140922099049543
+ },
+ "TAO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.678347150106851,
+  "ann_kr_pct": -3.1296877370602596
+ },
+ "SHIB": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.9427623138004727,
+  "ann_kr_pct": -6.528887137089206
+ },
+ "PAXG": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.8388424984366205,
+  "ann_kr_pct": 9.712624418179354
+ },
+ "AAVE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 8.38704180290181,
+  "ann_kr_pct": -2.2805119897436406
+ },
+ "ONDO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 7.256552797480599,
+  "ann_kr_pct": -5.350052479733721
+ },
+ "ENA": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 6.295706901675853,
+  "ann_kr_pct": -2.1090965497553698
+ },
+ "WLFI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -6.561276090293554,
+  "ann_kr_pct": -10.269639203720727
+ },
+ "ASTER": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.449887962298954,
+  "ann_kr_pct": 7.555417661592389
+ },
+ "MNT": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.455878182521651,
+  "ann_kr_pct": 49.3987843036685
+ },
+ "DOT": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -5.024874429872906,
+  "ann_kr_pct": -7.8622458860721505
+ },
+ "ICP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -2.940740749162074,
+  "ann_kr_pct": -12.690563806016401
+ },
+ "MORPHO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 2.74355966177033,
+  "ann_kr_pct": -22.759622775532904
+ },
+ "ETC": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.7906366030817684,
+  "ann_kr_pct": -11.790800087472109
+ },
+ "WLD": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3900,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.8544283694522553,
+  "ann_kr_pct": -4.620300713007916
+ },
+ "PUMP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.54854627259026,
+  "ann_kr_pct": 2.9535965817594816
+ },
+ "POL": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -4.124115217500843,
+  "ann_kr_pct": -14.310716852637444
+ },
+ "ARB": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 3.2550501994376337,
+  "ann_kr_pct": -3.376153120387688
+ },
+ "JUP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -0.23306765749634434,
+  "ann_kr_pct": 4.209198752167224
+ },
+ "ALGO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 4.706419896569566,
+  "ann_kr_pct": -9.966122414622209
+ },
+ "RENDER": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.477224701068496,
+  "ann_kr_pct": 1.664354027265718
+ },
+ "ATOM": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -11.961199678326397,
+  "ann_kr_pct": -19.712626478701594
+ },
+ "INJ": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -4.946586671465527,
+  "ann_kr_pct": -3.2666186183963544
+ },
+ "STX": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -3.3811008651895174,
+  "ann_kr_pct": -16.61385541197853
+ },
+ "CAKE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 3,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 3.935690967405241,
+  "ann_kr_pct": -24.19472434519492
+ },
+ "ETHFI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 10.486710448498481,
+  "ann_kr_pct": -11.621269564588085
+ },
+ "FIL": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 1.3336128724777867,
+  "ann_kr_pct": -7.912208096355179
+ },
+ "DASH": {
+  "skip": "<12m overlap (7457 h)"
+ },
+ "ZRO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 7.795727358902261,
+  "ann_kr_pct": 9.690296720110235
+ },
+ "PYTH": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.4165642671915423,
+  "ann_kr_pct": 13.398682732609577
+ },
+ "APT": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -7.493419492880441,
+  "ann_kr_pct": -11.95202966662246
+ },
+ "TIA": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.528594775120909,
+  "ann_kr_pct": 6.0965551966568245
+ },
+ "CRV": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 7.2547163306264775,
+  "ann_kr_pct": -1.7299705902334899
+ },
+ "PENGU": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 1.8743435630187832,
+  "ann_kr_pct": -0.4245833779834813
+ },
+ "GRASS": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 3,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 11.312844510583737,
+  "ann_kr_pct": 24.482205651698777
+ },
+ "SPX": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 7.533969011674728,
+  "ann_kr_pct": 13.769630403529586
+ },
+ "FET": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -6.246845008930379,
+  "ann_kr_pct": 2.31250444961986
+ },
+ "TRUMP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -25.109826529479246,
+  "ann_kr_pct": -24.52447063058432
+ },
+ "STRK": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -3.102795763716117,
+  "ann_kr_pct": 10.952591173382352
+ },
+ "VIRTUAL": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 3.2944147092565514,
+  "ann_kr_pct": -12.293687728490374
+ },
+ "SEI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -6.217281481903047,
+  "ann_kr_pct": -8.641296160232933
+ },
+ "PENDLE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3897,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 8.675753017838264,
+  "ann_kr_pct": 3.374835242373249
+ },
+ "XPL": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 10.374944149499495,
+  "ann_kr_pct": 46.66954467446454
+ },
+ "LDO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.54882503389945,
+  "ann_kr_pct": -2.6800090666908196
+ },
+ "BONK": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 10,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 1.514245412439546,
+  "ann_kr_pct": -14.417125895850747
+ },
+ "COMP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -11.040281716702284,
+  "ann_kr_pct": -31.83675390065818
+ },
+ "RUNE": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3896,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 5.809483845551682,
+  "ann_kr_pct": -1.4109913002727517
+ },
+ "CFX": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 9.85467717759532,
+  "ann_kr_pct": -30.150997358924883
+ },
+ "OP": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -4.814968169024857,
+  "ann_kr_pct": -6.639399359675855
+ },
+ "FLOKI": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3899,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 0.06783292354065938,
+  "ann_kr_pct": -26.32561136699513
+ },
+ "ENS": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": 8.479888866539198,
+  "ann_kr_pct": -1.7862195201931277
+ },
+ "JTO": {
+  "hours": 8891,
+  "start": "2025-11-26",
+  "maxlev": 5,
+  "proxied_hl_hours": 3898,
+  "first_hour": "2025-11-19",
+  "ann_hl_pct": -19.593197937509842,
+  "ann_kr_pct": -16.355848307327115
+ }
+}

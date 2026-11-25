@@ -1,0 +1,73 @@
+BTC    start=2025-11-26 hrs=8890 maxLev=40 proxied=3898 annFund HL=   5.7% KR=   3.6%
+ETH    start=2025-11-26 hrs=8890 maxLev=25 proxied=3898 annFund HL=   6.1% KR=   3.6%
+SOL    start=2025-11-26 hrs=8891 maxLev=20 proxied=3899 annFund HL=   0.9% KR=   0.3%
+XRP    start=2025-11-26 hrs=8891 maxLev=20 proxied=3899 annFund HL=   3.1% KR=   0.7%
+DOGE   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   5.8% KR=   1.9%
+PEPE   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   5.6% KR=  -3.8%
+KAS    start=2025-11-26 hrs=8891 maxLev= 3 proxied=3897 annFund HL=   5.0% KR=   1.5%
+SUI    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   5.1% KR=   0.7%
+LINK   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   9.3% KR=   0.8%
+AVAX   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   3.5% KR=  -3.5%
+BNB    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   6.1% KR=   2.7%
+TRX    start=2025-11-26 hrs=8891 maxLev=10 proxied=3900 annFund HL=  -6.1% KR=  -9.5%
+HYPE   start=2025-11-26 hrs=8891 maxLev=10 proxied=3897 annFund HL=   9.6% KR=   6.8%
+ZEC    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   6.0% KR=  -2.0%
+XMR SKIP <12m overlap (7524 h)
+ADA    start=2025-11-26 hrs=8891 maxLev=10 proxied=3897 annFund HL=  -2.3% KR=  -2.4%
+XLM    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=   2.0% KR=  -1.5%
+BCH    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   1.7% KR=  -2.1%
+NEAR   start=2025-11-26 hrs=8891 maxLev=10 proxied=3897 annFund HL=  10.7% KR=  -2.5%
+LTC    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   6.5% KR=  -1.1%
+UNI    start=2025-11-26 hrs=8891 maxLev=10 proxied=3896 annFund HL=   8.8% KR=  -1.7%
+HBAR   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   7.0% KR=  -1.8%
+TAO    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   6.7% KR=  -3.1%
+SHIB   start=2025-11-26 hrs=8891 maxLev=10 proxied=3896 annFund HL=   0.9% KR=  -6.5%
+PAXG   start=2025-11-26 hrs=8891 maxLev=10 proxied=3898 annFund HL=   6.8% KR=   9.7%
+AAVE   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   8.4% KR=  -2.3%
+ONDO   start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   7.3% KR=  -5.4%
+ENA    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   6.3% KR=  -2.1%
+WLFI   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL=  -6.6% KR= -10.3%
+ASTER  start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   9.4% KR=   7.6%
+MNT    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   9.5% KR=  49.4%
+DOT    start=2025-11-26 hrs=8891 maxLev=10 proxied=3896 annFund HL=  -5.0% KR=  -7.9%
+ICP    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  -2.9% KR= -12.7%
+MORPHO start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   2.7% KR= -22.8%
+ETC    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL=   0.8% KR= -11.8%
+WLD    start=2025-11-26 hrs=8891 maxLev=10 proxied=3900 annFund HL=   0.9% KR=  -4.6%
+PUMP   start=2025-11-26 hrs=8891 maxLev=10 proxied=3898 annFund HL=   9.5% KR=   3.0%
+POL    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=  -4.1% KR= -14.3%
+ARB    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   3.3% KR=  -3.4%
+JUP    start=2025-11-26 hrs=8891 maxLev=10 proxied=3898 annFund HL=  -0.2% KR=   4.2%
+ALGO   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   4.7% KR= -10.0%
+RENDER start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=   5.5% KR=   1.7%
+ATOM   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL= -12.0% KR= -19.7%
+INJ    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  -4.9% KR=  -3.3%
+STX    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  -3.4% KR= -16.6%
+CAKE   start=2025-11-26 hrs=8891 maxLev= 3 proxied=3898 annFund HL=   3.9% KR= -24.2%
+ETHFI  start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  10.5% KR= -11.6%
+FIL    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL=   1.3% KR=  -7.9%
+DASH SKIP <12m overlap (7457 h)
+ZRO    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=   7.8% KR=   9.7%
+PYTH   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL=   0.4% KR=  13.4%
+APT    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=  -7.5% KR= -12.0%
+TIA    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   0.5% KR=   6.1%
+CRV    start=2025-11-26 hrs=8891 maxLev=10 proxied=3899 annFund HL=   7.3% KR=  -1.7%
+PENGU  start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   1.9% KR=  -0.4%
+GRASS  start=2025-11-26 hrs=8891 maxLev= 3 proxied=3896 annFund HL=  11.3% KR=  24.5%
+SPX    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   7.5% KR=  13.8%
+FET    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=  -6.2% KR=   2.3%
+TRUMP  start=2025-11-26 hrs=8891 maxLev=10 proxied=3897 annFund HL= -25.1% KR= -24.5%
+STRK   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  -3.1% KR=  11.0%
+VIRTUAL start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   3.3% KR= -12.3%
+SEI    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=  -6.2% KR=  -8.6%
+PENDLE start=2025-11-26 hrs=8891 maxLev= 5 proxied=3897 annFund HL=   8.7% KR=   3.4%
+XPL    start=2025-11-26 hrs=8891 maxLev=10 proxied=3898 annFund HL=  10.4% KR=  46.7%
+LDO    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   9.5% KR=  -2.7%
+BONK   start=2025-11-26 hrs=8891 maxLev=10 proxied=3898 annFund HL=   1.5% KR= -14.4%
+COMP   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL= -11.0% KR= -31.8%
+RUNE   start=2025-11-26 hrs=8891 maxLev= 5 proxied=3896 annFund HL=   5.8% KR=  -1.4%
+CFX    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   9.9% KR= -30.2%
+OP     start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=  -4.8% KR=  -6.6%
+FLOKI  start=2025-11-26 hrs=8891 maxLev= 5 proxied=3899 annFund HL=   0.1% KR= -26.3%
+ENS    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL=   8.5% KR=  -1.8%
+JTO    start=2025-11-26 hrs=8891 maxLev= 5 proxied=3898 annFund HL= -19.6% KR= -16.4%
