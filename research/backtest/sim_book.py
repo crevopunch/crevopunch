@@ -17,13 +17,17 @@ import math
 import os
 import statistics
 import sys
+import argparse
+
+import slipmodel
 
 BASE = '/home/user/crevopunch/research/backtest'
 DATA = os.path.join(BASE, 'data')
 H = 3600
 WARM = 168
 HPY = 8760
-STOP = 20.0
+START = 200.0            # total equity = 2 x collateral per leg (--capital)
+SLIP_MODE = 'flat'     # 'flat' (old model) or 'size' (depth.csv curve, floored at flat)
 TRANSFER = 1.0
 REBAL = 0.60
 ORDER_MIN = 10.0
@@ -34,8 +38,8 @@ ADVERSE = 1e-4
 RULES_ALL = [1, 2, 3, 4, 5, 6, 8, 9, 11, 12, 13]
 
 
-def slip(coin):
-    return 2e-4 if coin in ('BTC', 'ETH') else 5e-4
+def NO_SLIP(N):
+    return 0.0
 
 
 def _f(x):
@@ -158,13 +162,14 @@ def eqleg(leg, p):
 
 
 def set_units(leg, qnew, p, fee, sl, acc):
-    """Move leg to signed units qnew at price p; fee/slip charged on traded notional."""
+    """Move leg to signed units qnew at price p; fee and slip(notional) charged on traded notional."""
     q, e = leg['q'], leg['e']
     dq = qnew - q
     if dq == 0:
         return
-    cf = abs(dq) * p * fee
-    cs = abs(dq) * p * sl
+    N = abs(dq) * p
+    cf = N * fee
+    cs = N * sl(N)
     leg['cash'] -= cf + cs
     acc['fees'] += cf
     acc['slip'] += cs
@@ -188,12 +193,12 @@ def run(D, cfg):
     allowed = cfg['venues']
     REF = 0.95 if R[5] else 1.0
     start = WARM - 1
-    free = 200.0
+    free = START
     acc = {'fees': 0.0, 'slip': 0.0, 'fund': 0.0, 'xfer': 0.0, 'xfers': 0, 'liq': 0, 'pre': 0, 'switch': 0, 'fund_ext': 0.0}
     active, closing, pend = [], [], []
     pnl_pair = {}
     st = {'newlist': 0.0}
-    series = [200.0]
+    series = [START]
     first_seen = {}
     for c, d in D['coins'].items():
         for v, vd in d['V'].items():
@@ -201,8 +206,8 @@ def run(D, cfg):
 
     def fees(v, c, maker):
         if maker:
-            return FEE_M[v] * REF, 0.0
-        return FEE_T[v] * REF, slip(c)
+            return FEE_M[v] * REF, NO_SLIP
+        return FEE_T[v] * REF, slipmodel.rate_fn(c, slipmodel.VENUE_NAME[v], SLIP_MODE)
 
     def V(coin, v):
         return D['coins'][coin]['V'][v]
@@ -293,7 +298,8 @@ def run(D, cfg):
                     if a == b or (cfg.get('hl_kr_only') and {a, b} != {'HL', 'KR'}):
                         continue
                     gain = WARM * (sa - sb)
-                    fc = 2 * sum(sum(fees(v, coin, False)) for v in (a, b))
+                    Nl = (free / max(1, K - len(active)) / 2) * min(cap, D['maxlev'][coin])  # forecast leg notional
+                    fc = 2 * sum(f + sl(Nl) for f, sl in (fees(v, coin, False) for v in (a, b)))
                     fc += TRANSFER / max(20.0, (free + sum(mark(p, i) for p in active)) / K)
                     pairs.append({'coin': coin, 's': a, 'l': b, 'gain': gain, 'cost': fc, 'net': gain - fc,
                                   'lt': 'LT' in (a, b)})
@@ -324,12 +330,12 @@ def run(D, cfg):
                     p = V(pos['coin'], leg['v'])['c'][i]
                     if p:
                         f, _ = fees(leg['v'], pos['coin'], True)
-                        set_units(leg, leg['pend'][1] * pos['N'] / p, p, f + ADVERSE, 0.0, acc)
+                        set_units(leg, leg['pend'][1] * pos['N'] / p, p, f + ADVERSE, NO_SLIP, acc)
                     leg['pend'] = None
                 if leg['pend_close'] == i:
                     p = V(pos['coin'], leg['v'])['c'][i]
                     f, _ = fees(leg['v'], pos['coin'], True)
-                    set_units(leg, 0.0, p, f + ADVERSE, 0.0, acc)
+                    set_units(leg, 0.0, p, f + ADVERSE, NO_SLIP, acc)
                     leg['pend_close'] = None
         for pos in list(closing):
             if all(l['q'] == 0 and l['pend_close'] is None for l in pos['legs']):
@@ -507,9 +513,9 @@ def run(D, cfg):
         if peak > 0:
             mdd = min(mdd, v / peak - 1)
     years = (n - start) / HPY
-    cagr = (final / 200.0) ** (1 / years) - 1 if final > 0 else -1.0
+    cagr = (final / START) ** (1 / years) - 1 if final > 0 else -1.0
     return {
-        'final_equity': final, 'total_return_pct': 100 * (final / 200 - 1), 'cagr_pct': 100 * cagr,
+        'final_equity': final, 'total_return_pct': 100 * (final / START - 1), 'cagr_pct': 100 * cagr,
         'max_drawdown_pct': 100 * mdd, 'liquidations': acc['liq'], 'preemptive_closes': acc['pre'],
         'funding_usd': acc['fund'], 'fees_usd': acc['fees'], 'slippage_usd': acc['slip'],
         'transfer_usd': acc['xfer'], 'transfers': acc['xfers'], 'switches': acc['switch'],
@@ -538,6 +544,13 @@ CONFIGS = {
 
 
 def main():
+    global START, SLIP_MODE
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--capital', type=float, default=100.0, help='collateral per leg, USD')
+    ap.add_argument('--slip', choices=['flat', 'size'], default='flat')
+    ap.add_argument('--out', help='output CSV (default results_CD.csv)')
+    a = ap.parse_args()
+    START = 2 * a.capital; SLIP_MODE = a.slip
     D = load_all()
     print('hours', D['n'], D['hours'][0], D['hours'][-1], 'coins', len(D['coins']), flush=True)
     rows = []
@@ -563,12 +576,12 @@ def main():
     fields = ['run', 'name', 'cap', 'ablation_off', 'start_date', 'final_equity', 'total_return_pct', 'cagr_pct',
               'max_drawdown_pct', 'liquidations', 'preemptive_closes', 'funding_usd', 'fees_usd', 'slippage_usd',
               'transfer_usd', 'transfers', 'switches', 'newlisting_pnl_usd', 'funding_from_extreme_usd', 'pnl_by_pair']
-    with open(os.path.join(BASE, 'results_CD.csv'), 'w', newline='') as f:
+    with open(a.out or os.path.join(BASE, 'results_CD.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore')
         w.writeheader()
         for r in rows:
             w.writerow({k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()})
-    print('wrote results_CD.csv')
+    print('wrote', a.out or 'results_CD.csv')
 
 
 if __name__ == '__main__':

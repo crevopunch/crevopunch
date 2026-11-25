@@ -13,24 +13,24 @@ import csv
 import json
 import statistics
 import os
+import argparse
+
+import slipmodel
 
 BASE = '/home/user/crevopunch/research/backtest'
 DATA = os.path.join(BASE, 'data')
 LEVS = [1, 3, 5, 10, 20]
 VARIANTS = ['A', 'B']
-EQ0 = 100.0            # collateral per venue
+EQ0 = 100.0            # collateral per venue (overridden by --capital)
 FEE = {'H': 4.5e-4, 'K': 5e-4}
 TRANSFER = 1.0
 WARM = 168             # trailing 7 days
 HPY = 8760
 FLIP = 0.10            # annualised differential needed to flip
 REBAL = 0.60
-STOP = 20.0
+STOP = 0.10 * 2 * EQ0    # 10% of starting total (was $20 of $200)
+SLIP_MODE = 'flat'     # 'flat' (old model) or 'size' (depth.csv curve, floored at flat)
 MIN_HOURS = 365 * 24   # ~12 months of complete overlap
-
-
-def slip(coin):
-    return 2e-4 if coin in ('BTC', 'ETH') else 5e-4
 
 
 def load(coin):
@@ -66,14 +66,17 @@ def eq(leg, p):
 
 
 def trade(leg, qnew, p, rate, acc):
-    """Move a leg to signed units qnew at price p; fee+slippage on traded notional."""
+    """Move a leg to signed units qnew at price p; fee and size-dependent slippage on traded notional.
+    rate = (fee fraction, slippage function of notional)."""
     q, e = leg['q'], leg['e']
     dq = qnew - q
     if dq == 0:
         return
-    cost = abs(dq) * p * rate
-    leg['cash'] -= cost
-    acc['fees'] += cost
+    N = abs(dq) * p
+    cf, cs = N * rate[0], N * rate[1](N)
+    leg['cash'] -= cf + cs
+    acc['fees'] += cf
+    acc['slip'] += cs
     if q != 0 and qnew * q >= 0 and abs(qnew) <= abs(q):      # reduce or close
         leg['cash'] += (q - qnew) * (p - e)
         leg['q'] = qnew
@@ -97,10 +100,11 @@ def simulate(rows, coin, maxlev, L, variant):
     for i in range(n):
         cumH.append(cumH[-1] + hf[i]); cumK.append(cumK[-1] + kf[i])
     mmr = 1.0 / (2 * maxlev)
-    rate = {'H': FEE['H'] + slip(coin), 'K': FEE['K'] + slip(coin)}
+    rate = {'H': (FEE['H'], slipmodel.rate_fn(coin, 'Hyperliquid', SLIP_MODE)),
+            'K': (FEE['K'], slipmodel.rate_fn(coin, 'Kraken', SLIP_MODE))}
     H = {'cash': EQ0, 'q': 0.0, 'e': 0.0}
     K = {'cash': EQ0, 'q': 0.0, 'e': 0.0}
-    acc = {'fees': 0.0, 'fund': 0.0, 'xfer': 0.0, 'flips': 0, 'liqs': 0, 'resizes': 0, 'xfers': 0}
+    acc = {'fees': 0.0, 'slip': 0.0, 'fund': 0.0, 'xfer': 0.0, 'flips': 0, 'liqs': 0, 'resizes': 0, 'xfers': 0}
     short = None          # venue we are short: 'H' or 'K'
     last_dec = None
     pend_xfer = None
@@ -226,7 +230,8 @@ def simulate(rows, coin, maxlev, L, variant):
     return {
         'start_date': rows[start][0][:10], 'final_equity': final, 'total_return_pct': 100 * ret,
         'cagr_pct': 100 * cagr, 'max_drawdown_pct': 100 * mdd, 'liquidations': acc['liqs'],
-        'funding_usd': acc['fund'], 'fees_slippage_usd': acc['fees'], 'exit_usd': exit_cost, 'transfer_usd': acc['xfer'],
+        'funding_usd': acc['fund'], 'fees_slippage_usd': acc['fees'] + acc['slip'], 'fees_usd': acc['fees'],
+        'slippage_usd': acc['slip'], 'exit_usd': exit_cost, 'transfer_usd': acc['xfer'],
         'flips': acc['flips'], 'resizes': acc['resizes'], 'transfers': acc['xfers'],
         'dead': dead, 'years': years,
     }
@@ -316,6 +321,13 @@ def write_summary(out, info):
 
 
 def main():
+    global EQ0, STOP, SLIP_MODE
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--capital', type=float, default=100.0, help='collateral per leg, USD')
+    ap.add_argument('--slip', choices=['flat', 'size'], default='flat')
+    ap.add_argument('--out', help='write run rows here; results.csv and summary.md are then left alone')
+    a = ap.parse_args()
+    EQ0 = a.capital; STOP = 0.10 * 2 * EQ0; SLIP_MODE = a.slip
     meta = json.load(open(os.path.join(DATA, 'meta.json')))['coins']
     out, info = [], {}
     for coin, m in meta.items():
@@ -341,13 +353,15 @@ def main():
                 r = simulate(rows, coin, m['hl_max_leverage'], L, v)
                 out.append({**base, 'status': 'ok', **r})
     fields = ['coin', 'variant', 'L', 'status', 'start_date', 'final_equity', 'total_return_pct', 'cagr_pct',
-              'max_drawdown_pct', 'liquidations', 'funding_usd', 'fees_slippage_usd', 'transfer_usd',
+              'max_drawdown_pct', 'liquidations', 'funding_usd', 'fees_slippage_usd', 'fees_usd', 'slippage_usd', 'transfer_usd',
               'flips', 'resizes', 'transfers', 'dead']
-    with open(os.path.join(BASE, 'results.csv'), 'w', newline='') as f:
+    with open(a.out or os.path.join(BASE, 'results.csv'), 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore')
         w.writeheader()
         for r in out:
             w.writerow({k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()})
+    if a.out:
+        return
     json.dump(info, open(os.path.join(BASE, 'data', 'coin_info.json'), 'w'), indent=1)
     write_summary(out, info)
     # compact print

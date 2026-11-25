@@ -198,3 +198,79 @@ A and B are medians across the coins where the cap is allowed (n shown); C and D
 | rule 12 | 29.1 | -85.5 | -85.6 | 11 | 2 | 36 | 12 | 3.0 | 3.3 | 2.4 |
 | rule 13 | 36.0 | -82.1 | -82.2 | 11 | 3 | 52 | 21 | 12.1 | 5.2 | 10.5 |
 
+
+## Scaled capital
+
+Collateral per leg = CAP (total start = 2 x CAP); TRANSFER fixed at $1; stop (A/B only) = 10% of starting total. Size-dependent slippage from depth.csv (see slipmodel.py), floored at the old flat rate. Caps for C/D are leverage caps. Cell = return % / max DD % / #liquidations.
+
+### CAP = $100 per leg
+
+| row | cap 3 | cap 5 | cap 10 | cap 20 |
+|---|---|---|---|---|
+| A (coin median) | -52.1 / -53.1 / 7 | -91.3 / -91.3 / 9 | -91.4 / -91.4 / 8 | -91.6 / -91.6 / 10 |
+| B (coin median) | -40.0 / -41.2 / 0 | -93.2 / -93.5 / 4 | -92.2 / -92.2 / 5 | -91.9 / -91.9 / 6 |
+| C | 68.1 / -18.6 / 0 | -91.5 / -91.8 / 4 | -93.6 / -93.6 / 8 | -92.0 / -92.0 / 7 |
+| D top-1 | -25.7 / -53.2 / 2 | -91.9 / -93.1 / 6 | -92.0 / -93.2 / 7 | -91.6 / -92.8 / 8 |
+| D top-2 | -11.9 / -39.3 / 2 | -84.2 / -84.6 / 7 | -83.4 / -83.6 / 11 | -93.7 / -93.8 / 12 |
+
+1x median return: A 1.4%, B -2.1% (n=71 coins).
+
+### CAP = $1,000 per leg
+
+| row | cap 3 | cap 5 | cap 10 | cap 20 |
+|---|---|---|---|---|
+| A (coin median) | -48.9 / -53.6 / 7 | -90.8 / -90.9 / 9 | -91.5 / -91.5 / 9 | -91.1 / -91.1 / 10 |
+| B (coin median) | -2.1 / -9.1 / 0 | -79.7 / -82.6 / 4 | -91.6 / -91.6 / 6 | -91.4 / -91.4 / 6 |
+| C | 130.5 / -23.4 / 0 | 34.4 / -66.6 / 2 | -91.8 / -93.9 / 14 | -99.2 / -99.2 / 12 |
+| D top-1 | -39.4 / -62.0 / 0 | -92.1 / -93.3 / 5 | -99.4 / -99.5 / 14 | -99.2 / -99.3 / 13 |
+| D top-2 | -24.8 / -30.2 / 2 | -80.0 / -80.5 / 12 | -98.3 / -98.3 / 22 | -98.7 / -98.7 / 23 |
+
+1x median return: A 1.4%, B 2.0% (n=71 coins).
+
+### CAP = $10,000 per leg
+
+| row | cap 3 | cap 5 | cap 10 | cap 20 |
+|---|---|---|---|---|
+| A (coin median) | -50.4 / -52.8 / 7 | -90.8 / -90.8 / 9 | -91.4 / -91.4 / 8 | -91.1 / -91.1 / 10 |
+| B (coin median) | -1.2 / -10.5 / 0 | -76.7 / -80.0 / 4 | -91.0 / -91.0 / 6 | -91.2 / -91.2 / 6 |
+| C | 62.9 / -22.2 / 0 | -25.7 / -67.4 / 2 | -96.1 / -96.9 / 17 | -99.9 / -99.9 / 18 |
+| D top-1 | -81.4 / -84.9 / 0 | -98.2 / -98.4 / 5 | -99.9 / -99.9 / 19 | -99.9 / -99.9 / 19 |
+| D top-2 | -44.1 / -47.6 / 1 | -90.3 / -92.4 / 15 | -99.8 / -99.8 / 36 | -99.9 / -99.9 / 36 |
+
+1x median return: A 1.3%, B 2.2% (n=71 coins).
+
+### Top 5 coins at 3x, variant B
+
+| CAP | coin | return % | max DD % | #liq |
+|---|---|---|---|---|
+| 100 | MNT | 83.5 | -22.3 | 0 |
+| 100 | TRX | -2.2 | -3.8 | 0 |
+| 100 | PAXG | -6.1 | -6.9 | 0 |
+| 100 | BTC | -6.4 | -6.5 | 0 |
+| 100 | LTC | -8.8 | -8.9 | 0 |
+| 1000 | MNT | 106.7 | -21.9 | 0 |
+| 1000 | VIRTUAL | 16.0 | -5.3 | 0 |
+| 1000 | BONK | 15.2 | -11.7 | 0 |
+| 1000 | NEAR | 13.7 | -2.0 | 0 |
+| 1000 | ALGO | 13.1 | -4.9 | 0 |
+| 10000 | MNT | 81.8 | -25.3 | 0 |
+| 10000 | VIRTUAL | 20.9 | -5.0 | 0 |
+| 10000 | BONK | 17.4 | -12.0 | 0 |
+| 10000 | LDO | 15.5 | -5.3 | 0 |
+| 10000 | ALGO | 15.0 | -4.9 | 0 |
+
+### C at cap 3: funding and slippage shares
+
+| CAP | funding from hours with abs(funding) > 0.1%/h | slippage as % of gross P&L |
+|---|---|---|
+| 100 | 60.3% | 11.5% (slip $35.48, gross $308.09) |
+| 1000 | 61.5% | 14.2% (slip $543.51, gross $3835.18) |
+| 10000 | 61.3% | 30.0% (slip $7374.93, gross $24606.28) |
+
+Caveats for this section:
+- Slippage: per (coin, venue) curve from data/depth.csv (buy/sell mean, ok rows only, venues Hyperliquid/Kraken/Lighter/Aster; OKX and dYdX not used by the sims). Log-N linear between $100, $1k, $10k; below $100 held at the $100 value; above $10k s(10k) x sqrt(N/10k) capped at 300 bps. Missing pairs use the venue median curve. Floored at the old flat rate. Maker fills still carry no slippage.
+- Two pairs exceed 300 bps in range (CRO/Kraken 2957 bps at $10k, OKB/Aster 746 bps at $10k). Their extrapolation drops to 300 bps, so the cost is non-monotone above $10k. Left as specified, not adjusted.
+- Book (C/D): the book sim has no stop rule (STOP was defined but never used), so none is applied. Start total = 2 x CAP. Forecast cost uses leg notional approximated as free/slots/2 x min(cap, HL max lev) (ignores rule-12 vol sizing). ORDER_MIN ($10) and the $20 floor in the transfer forecast are unchanged.
+- Shares: funding share = funding from hours with |rate| > 0.1%/h divided by net funding. Slippage share = slippage divided by gross P&L, where gross = (final - 2 x CAP) + fees + slippage + transfers.
+- Reproduction: sim.py --slip flat at $100 matches results.csv (710/710 rows) and sim_book.py --slip flat matches results_CD.csv (23/23 rows).
+- Reproduce: `python3 sim.py --capital 1000 --slip size --out X.csv`, `python3 sim_book.py --capital 1000 --slip size --out Y.csv`; merge and tables were built from those runs.

@@ -256,3 +256,32 @@ At 1x, A and B end at about $198–208 per coin (+0–4%/yr).
 - Close both legs yourself before liquidation; don't rely on rebalancing transfers.
 - Accept that most of the upside comes from rare, extreme funding on illiquid Kraken alts, which may not be fillable at the simulated prices.
 - Paper-trade it live for 1–2 months before committing capital.
+
+### 8b. Same backtest at $1k and $10k per leg (added 2026-11-25)
+
+**Method changes:**
+- Slippage now scales with order size, calibrated from live order-book depth (`backtest/slipmodel.py`). Above $10k it grows with √size, capped at 300 bps.
+- The $1 transfer fee is unchanged.
+- The $100 run was redone with this slippage model so all three sizes are comparable.
+- Full tables: `backtest/summary.md` ("Scaled capital").
+
+**Return % at a 3x leverage cap** (max drawdown in brackets):
+
+| Variant | $100/leg | $1k/leg | $10k/leg |
+|---|---|---|---|
+| A (coin median) | −52% (−53%) | −49% (−54%) | −50% (−53%) |
+| B (coin median) | −40% (−41%) | −2% (−9%) | −1% (−11%) |
+| **C** | **+68% (−19%)** | **+131% (−23%)** | **+63% (−22%)** |
+| D top-1 | −26% (−53%) | −39% (−62%) | −81% (−85%) |
+| D top-2 | −12% (−39%) | −25% (−30%) | −44% (−48%) |
+| 1x A / B median | +1.4% / −2.1% | +1.4% / +2.0% | +1.3% / +2.2% |
+
+**At caps of 5x and above, nearly every variant loses 77–99.9% at every size.**
+- The one exception is C at a 5x cap with $1k/leg: +34%, with a −67% drawdown.
+- At $10k and ≥10x, slippage on $100k–$200k orders adds to the liquidation losses, and results reach −99.9%.
+
+**Takeaways:**
+- **Size helps only up to a point.** Going from $100 to $1k removes the fixed-transfer drag, so B goes from −40% to −2% and C from +68% to +131%. At $10k, slippage takes 30% of C's gross P&L (11% at $100), and C falls back to +63%.
+- **C at 3x is still the only consistently positive setup.** About 61% of its funding comes from rare, extreme hours (above 0.1%/h) on thin Kraken alts. Treat it as an upper bound.
+- **B's best coin at 3x is MNT at every size (+82% to +107%).** That comes from a Kraken funding series with huge spikes (std about 2,050% annualised). It is likely not fillable, so exclude it. The next best are VIRTUAL, BONK, LDO, ALGO and NEAR, at about +13% to +21%/yr.
+- **Caveat:** the C and D simulations have no 10% stop-out; only A and B do.
