@@ -205,3 +205,54 @@ You need **≥$5–10k per leg** (≥$10–20k capital in total, since collatera
 - `collect.py`, `analyze.py`, `carry.py`, `spread_sim.py`: rerunnable scripts.
 - `data/`: raw samples, depth, funding, listings, summaries.
 - `fees.md`, `risks.md`: source notes with URLs and verification status.
+
+---
+
+## 8. Backtest of leveraged funding carry (added 2026-11-25)
+
+**Setup:**
+- Scripts and data are in `backtest/`.
+- $100 collateral per leg, $200 total.
+- Trading window 2025-11-26 → 2026-11-24, hourly. It is limited to 1 year because Kraken's public funding history starts 2025-11-19.
+- Legs are on Hyperliquid and Kraken (D also uses Lighter and Aster).
+- No lookahead. Exit costs are included.
+
+**Variants:**
+- **A:** static coin, no rebalancing; on liquidation, the other leg is auto-closed and the trade re-opens.
+- **B:** A plus 60%-equity margin rebalancing ($1 per transfer, 1h delay).
+- **C:** maker entries, rotation across HL–Kraken coins, close both legs before liquidation, volatility-adjusted leverage, compounding.
+- **D:** all section 1 and section 2 rules plus C's risk rules (see `backtest/SPEC_D.md`).
+
+**Results** (final equity from $200 / max drawdown / # liquidations; A and B are per-coin medians):
+
+| Variant | Cap 3x | Cap 5x | Cap 10x | Cap 20x |
+|---|---|---|---|---|
+| A | $96 / −53% / 7 | $18 / −91% / 9 | $17 / −91% / 8 | $17 / −92% / 10 |
+| B | $120 / −41% / 0 | $14 / −93% / 4 | $16 / −92% / 5 | $16 / −92% / 6 |
+| **C** | **$341 / −19% / 0** | $17 / −92% / 4 | $13 / −94% / 8 | $16 / −92% / 7 |
+| D top-1 | $133 / −58% / 2 | $20 / −92% / 6 | $16 / −93% / 7 | $17 / −93% / 8 |
+| D top-2 | $170 / −39% / 2 | $32 / −85% / 11 | $33 / −84% / 11 | $13 / −94% / 12 |
+
+At 1x, A and B end at about $198–208 per coin (+0–4%/yr).
+
+**What it shows:**
+1. **Leverage ≥5x is ruinous at $100/leg.** Every variant ends at about $13–33, which is near the $20 stop.
+   - Each liquidation or pre-emptive close costs the leg's residual margin, plus fees and slippage on 5–20× notional, plus a $1 transfer.
+   - Volatile months produce dozens of these events.
+   - Rebalancing (B) swaps liquidations for transfers: BTC 10x made 102 transfers at $1 each, which is about half the capital.
+2. **The only clearly positive result is C at a 3x cap (+70%).** It is fragile:
+   - About 60% of its funding came from hours with |funding| > 0.1%/h, almost all on **thin Kraken markets** (XPL 563 h, MNT 336 h, CAKE 256 h, GRASS, CFX, MORPHO, SPX).
+   - Those books are thin (section 4). The backtest assumes fills at the close with 5 bps slippage.
+   - Before 2026-04-30 the Hyperliquid price is proxied by Kraken's, so any price gap between the venues on those coins is ignored.
+   - Treat the +70% as an **upper bound**, not an expectation.
+3. **More rules ≠ more profit.** D (everything on) did worse than C.
+   - It churned: D top-1 rotated 460 times.
+   - In the ablation (cap 10), switching off individual rules often *improved* results, so at 10x the rules are noise next to liquidation losses.
+4. **At $100/leg, fixed costs dominate.** $1 per transfer is 1% of a leg each time. This is the main reason leverage + rebalancing fails at this size.
+
+**Practical rules if you still run it with ~$100/leg:**
+- Cap leverage at **≤3x**.
+- Rotate only rarely.
+- Close both legs yourself before liquidation; don't rely on rebalancing transfers.
+- Accept that most of the upside comes from rare, extreme funding on illiquid Kraken alts, which may not be fillable at the simulated prices.
+- Paper-trade it live for 1–2 months before committing capital.

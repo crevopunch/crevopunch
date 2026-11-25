@@ -11,6 +11,7 @@ Writes results.csv and summary.md into the backtest folder.
 """
 import csv
 import json
+import statistics
 import os
 
 BASE = '/home/user/crevopunch/research/backtest'
@@ -58,6 +59,10 @@ def liquidated(leg, hi, lo, mmr):
         return False
     w = lo if q > 0 else hi  # worst price within the hour
     return leg['cash'] + q * (w - leg['e']) < mmr * abs(q) * w
+
+
+def eq(leg, p):
+    return leg['cash'] + leg['q'] * (p - leg['e'])
 
 
 def trade(leg, qnew, p, rate, acc):
@@ -124,8 +129,10 @@ def simulate(rows, coin, maxlev, L, variant):
         # (a) variant-B transfer scheduled for this hour
         if pend_xfer == i:
             pend_xfer = None
-            tot = H['cash'] + K['cash']
-            H['cash'] = K['cash'] = (tot - TRANSFER) / 2
+            tot = eq(H, pH) + eq(K, pK)
+            tgt = (tot - TRANSFER) / 2
+            H['cash'] = tgt - H['q'] * (pH - H['e'])
+            K['cash'] = tgt - K['q'] * (pK - K['e'])
             acc['xfer'] += TRANSFER; acc['xfers'] += 1
         # (b) liquidation check on this hour's high/low
         if H['q'] or K['q']:
@@ -185,7 +192,7 @@ def simulate(rows, coin, maxlev, L, variant):
                 acc['flips'] += 1
         # (f) variant B: monthly re-size of notional to equity x L
         if variant == 'B' and in_pos and i > start and rows[i][0][:7] != rows[i - 1][0][:7]:
-            N = min(H['cash'], K['cash']) * L
+            N = min(eq(H, pH), eq(K, pK)) * L
             sH = -N / pH if short == 'H' else N / pH
             sK = -N / pK if short == 'K' else N / pK
             trade(H, sH, pH, rate['H'], acc)
@@ -193,12 +200,20 @@ def simulate(rows, coin, maxlev, L, variant):
             acc['resizes'] += 1
         # (g) variant B: schedule transfer when a leg falls below 60% of the other
         if variant == 'B' and in_pos and pend_xfer is None:
-            lo, hi = min(H['cash'], K['cash']), max(H['cash'], K['cash'])
+            eH, eK = eq(H, pH), eq(K, pK)
+            lo, hi = min(eH, eK), max(eH, eK)
             if lo < REBAL * hi:
                 pend_xfer = i + 1
         # (h) mark to market at this venue's close
         series.append(H['cash'] + K['cash'] + H['q'] * (pH - H['e']) + K['q'] * (pK - K['e']))
 
+    exit_cost = 0.0
+    if not dead and (H['q'] or K['q']):
+        before = acc['fees']
+        close_pos(n - 1)
+        exit_cost = acc['fees'] - before
+        series[-1] = H['cash'] + K['cash']
+    acc['exit'] = exit_cost
     final = series[-1]
     peak, mdd = series[0], 0.0
     for v in series:
@@ -211,7 +226,7 @@ def simulate(rows, coin, maxlev, L, variant):
     return {
         'start_date': rows[start][0][:10], 'final_equity': final, 'total_return_pct': 100 * ret,
         'cagr_pct': 100 * cagr, 'max_drawdown_pct': 100 * mdd, 'liquidations': acc['liqs'],
-        'funding_usd': acc['fund'], 'fees_slippage_usd': acc['fees'], 'transfer_usd': acc['xfer'],
+        'funding_usd': acc['fund'], 'fees_slippage_usd': acc['fees'], 'exit_usd': exit_cost, 'transfer_usd': acc['xfer'],
         'flips': acc['flips'], 'resizes': acc['resizes'], 'transfers': acc['xfers'],
         'dead': dead, 'years': years,
     }
@@ -253,6 +268,49 @@ def write_summary(out, info):
               '- Position sizes are in units fixed at open; funding accrues on the mark (venue close).',
               '- Liquidation is checked on each venue\'s hourly high/low against maintenance margin 1/(2 x HL maxLev).',
               '- No exit cost on the final mark-to-market equity; no funding-rate caps; no slippage beyond the flat bps.']
+    cd_path = os.path.join(BASE, 'results_CD.csv')
+    if os.path.exists(cd_path):
+        cd = list(csv.DictReader(open(cd_path)))
+        lines += ['## Side-by-side: A, B, C, D (equal $200 start; caps 3/5/10/20; exit costs included)', '',
+                  'A and B are medians across the coins where the cap is allowed (n shown); C and D are one book '
+                  'across the 73-coin universe. Cell = final $ / CAGR % / max DD % / liquidations.', '',
+                  '| variant | ' + ' | '.join(f'cap {L}' for L in (3, 5, 10, 20)) + ' |',
+                  '|---|' + '---|' * 4]
+        for v in VARIANTS:
+            cells = []
+            for L in (3, 5, 10, 20):
+                ok = [r for r in out if r['variant'] == v and r['L'] == L and r['status'] == 'ok']
+                if not ok:
+                    cells.append('n/a'); continue
+                med = lambda k: statistics.median(float(r[k]) for r in ok)
+                cells.append(f"{med('final_equity'):.1f} / {med('cagr_pct'):.1f} / {med('max_drawdown_pct'):.1f} / "
+                             f"{statistics.median(int(r['liquidations']) for r in ok):.0f} (n={len(ok)})")
+            lines.append(f'| {v} (per coin, median) | ' + ' | '.join(cells) + ' |')
+        for name in ('C', 'D top1', 'D top2'):
+            cells = []
+            for L in (3, 5, 10, 20):
+                key = {'C': 'C', 'D top1': 'D1', 'D top2': 'D2'}[name]
+                r = next((x for x in cd if x['run'] == key and int(x['cap']) == L and not x['ablation_off']), None)
+                cells.append('n/a' if r is None else
+                             f"{float(r['final_equity']):.1f} / {float(r['cagr_pct']):.1f} / "
+                             f"{float(r['max_drawdown_pct']):.1f} / {r['liquidations']}")
+            lines.append(f'| {name} (book) | ' + ' | '.join(cells) + ' |')
+        lines += ['', '## D ablation (cap 10, top-2): one rule off at a time', '',
+                  '| rule off | final $ | CAGR % | max DD % | liquidations | pre-emptive closes | transfers | switches | funding $ | fees $ | funding $ from |rate|>0.1%/h prints |',
+                  '|---|---|---|---|---|---|---|---|---|---|---|']
+        full = next((x for x in cd if x['run'] == 'D2' and int(x['cap']) == 10 and not x['ablation_off']), None)
+        if full:
+            lines.append(f"| none (full D) | {float(full['final_equity']):.1f} | {float(full['cagr_pct']):.1f} | "
+                         f"{float(full['max_drawdown_pct']):.1f} | {full['liquidations']} | {full['preemptive_closes']} | "
+                         f"{full['transfers']} | {full['switches']} | {float(full['funding_usd']):.1f} | "
+                         f"{float(full['fees_usd']):.1f} | {float(full['funding_from_extreme_usd']):.1f} |")
+        for r in cd:
+            if r['run'] == 'ABL':
+                lines.append(f"| rule {r['ablation_off']} | {float(r['final_equity']):.1f} | {float(r['cagr_pct']):.1f} | "
+                             f"{float(r['max_drawdown_pct']):.1f} | {r['liquidations']} | {r['preemptive_closes']} | "
+                             f"{r['transfers']} | {r['switches']} | {float(r['funding_usd']):.1f} | "
+                             f"{float(r['fees_usd']):.1f} | {float(r['funding_from_extreme_usd']):.1f} |")
+        lines.append('')
     with open(os.path.join(BASE, 'summary.md'), 'w') as f:
         f.write('\n'.join(lines) + '\n')
 

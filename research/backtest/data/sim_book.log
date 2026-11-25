@@ -1,0 +1,25 @@
+hours 8895 2025-11-19T09:00Z 2026-11-24T23:00Z coins 73
+C cap3                 final=  340.79 liq=  0 pre=  0 xfers= 96 switches= 47 fund= 306.26 fees= 42.33 cagr=   70.7
+D top1 cap3            final=  133.06 liq=  2 pre=  0 xfers=460 switches=460 fund= 264.73 fees= 89.56 cagr=  -33.6
+D top2 cap3            final=  169.55 liq=  2 pre=  1 xfers=340 switches=335 fund= 173.93 fees= 44.00 cagr=  -15.3
+C cap5                 final=   17.06 liq=  4 pre=  1 xfers=109 switches= 23 fund=  77.68 fees= 15.33 cagr=  -91.5
+D top1 cap5            final=   19.73 liq=  6 pre=  0 xfers=134 switches=122 fund=  36.33 fees= 14.88 cagr=  -90.2
+D top2 cap5            final=   31.63 liq=  7 pre=  2 xfers= 58 switches= 23 fund=   4.70 fees=  4.58 cagr=  -84.3
+C cap10                final=   12.75 liq=  8 pre=  1 xfers= 52 switches=  2 fund=  34.14 fees=  4.15 cagr=  -93.7
+D top1 cap10           final=   16.06 liq=  7 pre=  1 xfers= 46 switches= 29 fund=   9.52 fees= 10.61 cagr=  -92.0
+D top2 cap10           final=   33.30 liq= 11 pre=  1 xfers= 44 switches= 17 fund=   8.89 fees=  4.64 cagr=  -83.5
+C cap20                final=   16.01 liq=  7 pre=  1 xfers= 52 switches=  1 fund=  28.27 fees=  3.17 cagr=  -92.1
+D top1 cap20           final=   16.94 liq=  8 pre=  1 xfers= 41 switches= 25 fund=   9.37 fees=  8.84 cagr=  -91.6
+D top2 cap20           final=   12.74 liq= 12 pre=  2 xfers= 51 switches= 12 fund=   3.02 fees=  3.23 cagr=  -93.7
+D top2 cap10 no1       final=   38.49 liq=  8 pre=  6 xfers= 52 switches= 27 fund=   7.39 fees=  8.53 cagr=  -80.9
+D top2 cap10 no2       final=   33.30 liq= 11 pre=  1 xfers= 44 switches= 17 fund=   8.89 fees=  4.64 cagr=  -83.5
+D top2 cap10 no3       final=   39.49 liq=  8 pre=  2 xfers= 84 switches= 52 fund=  12.12 fees= 11.20 cagr=  -80.4
+D top2 cap10 no4       final=   26.43 liq=  7 pre=  2 xfers= 92 switches= 24 fund=   8.80 fees=  5.20 cagr=  -86.9
+D top2 cap10 no5       final=   33.21 liq= 11 pre=  1 xfers= 44 switches= 17 fund=   8.88 fees=  4.85 cagr=  -83.5
+D top2 cap10 no6       final=   32.98 liq= 13 pre=  5 xfers= 23 switches=  0 fund=   9.89 fees=  2.58 cagr=  -83.6
+D top2 cap10 no8       final=   25.05 liq= 11 pre=  4 xfers= 61 switches= 21 fund=  10.86 fees=  5.42 cagr=  -87.6
+D top2 cap10 no9       final=   30.39 liq=  7 pre=  2 xfers= 55 switches=  2 fund=  13.78 fees=  1.71 cagr=  -84.9
+D top2 cap10 no11      final=   33.50 liq= 16 pre=  0 xfers= 11 switches= 11 fund=   3.55 fees=  3.45 cagr=  -83.4
+D top2 cap10 no12      final=   29.11 liq= 11 pre=  2 xfers= 36 switches= 12 fund=   2.99 fees=  3.29 cagr=  -85.5
+D top2 cap10 no13      final=   36.05 liq= 11 pre=  3 xfers= 52 switches= 21 fund=  12.08 fees=  5.18 cagr=  -82.1
+wrote results_CD.csv

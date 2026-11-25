@@ -1,0 +1,961 @@
+{
+ "pass1": {
+  "BTC": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 1,
+   "as_symbol": "BTCUSDT"
+  },
+  "ETH": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 0,
+   "as_symbol": "ETHUSDT"
+  },
+  "SOL": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 2,
+   "as_symbol": "SOLUSDT"
+  },
+  "XRP": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 7,
+   "as_symbol": "XRPUSDT"
+  },
+  "DOGE": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 3,
+   "as_symbol": "DOGEUSDT"
+  },
+  "PEPE": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "KAS": {
+   "lt_hours": 0,
+   "as_payouts": 5723,
+   "lt_symbol": null,
+   "as_symbol": "KASUSDT"
+  },
+  "SUI": {
+   "lt_hours": 15869,
+   "as_payouts": 2191,
+   "lt_symbol": 16,
+   "as_symbol": "SUIUSDT"
+  },
+  "LINK": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 8,
+   "as_symbol": "LINKUSDT"
+  },
+  "AVAX": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 9,
+   "as_symbol": "AVAXUSDT"
+  },
+  "BNB": {
+   "lt_hours": 15295,
+   "as_payouts": 2191,
+   "lt_symbol": 25,
+   "as_symbol": "BNBUSDT"
+  },
+  "TRX": {
+   "lt_hours": 12255,
+   "as_payouts": 2191,
+   "lt_symbol": 43,
+   "as_symbol": "TRXUSDT"
+  },
+  "HYPE": {
+   "lt_hours": 15295,
+   "as_payouts": 2571,
+   "lt_symbol": 24,
+   "as_symbol": "HYPEUSDT"
+  },
+  "ZEC": {
+   "lt_hours": 10007,
+   "as_payouts": 8405,
+   "lt_symbol": 90,
+   "as_symbol": "ZECUSDT"
+  },
+  "XMR": {
+   "lt_hours": 10604,
+   "as_payouts": 6635,
+   "lt_symbol": 77,
+   "as_symbol": "XMRUSDT"
+  },
+  "ADA": {
+   "lt_hours": 13381,
+   "as_payouts": 2191,
+   "lt_symbol": 39,
+   "as_symbol": "ADAUSDT"
+  },
+  "XLM": {
+   "lt_hours": 8344,
+   "as_payouts": 2191,
+   "lt_symbol": 119,
+   "as_symbol": "XLMUSDT"
+  },
+  "BCH": {
+   "lt_hours": 11345,
+   "as_payouts": 2191,
+   "lt_symbol": 58,
+   "as_symbol": "BCHUSDT"
+  },
+  "NEAR": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 10,
+   "as_symbol": "NEARUSDT"
+  },
+  "LTC": {
+   "lt_hours": 14531,
+   "as_payouts": 2191,
+   "lt_symbol": 35,
+   "as_symbol": "LTCUSDT"
+  },
+  "UNI": {
+   "lt_hours": 15083,
+   "as_payouts": 2191,
+   "lt_symbol": 30,
+   "as_symbol": "UNIUSDT"
+  },
+  "HBAR": {
+   "lt_hours": 11345,
+   "as_payouts": 6102,
+   "lt_symbol": 59,
+   "as_symbol": "HBARUSDT"
+  },
+  "TAO": {
+   "lt_hours": 16218,
+   "as_payouts": 6333,
+   "lt_symbol": 13,
+   "as_symbol": "TAOUSDT"
+  },
+  "SHIB": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "PAXG": {
+   "lt_hours": 11609,
+   "as_payouts": 1608,
+   "lt_symbol": 48,
+   "as_symbol": "PAXGUSDT"
+  },
+  "AAVE": {
+   "lt_hours": 15083,
+   "as_payouts": 2191,
+   "lt_symbol": 27,
+   "as_symbol": "AAVEUSDT"
+  },
+  "ONDO": {
+   "lt_hours": 13904,
+   "as_payouts": 4194,
+   "lt_symbol": 38,
+   "as_symbol": "ONDOUSDT"
+  },
+  "ENA": {
+   "lt_hours": 15083,
+   "as_payouts": 2278,
+   "lt_symbol": 29,
+   "as_symbol": "ENAUSDT"
+  },
+  "WLFI": {
+   "lt_hours": 10913,
+   "as_payouts": 2724,
+   "lt_symbol": 72,
+   "as_symbol": "WLFIUSDT"
+  },
+  "ASTER": {
+   "lt_hours": 10362,
+   "as_payouts": 2608,
+   "lt_symbol": 83,
+   "as_symbol": "ASTERUSDT"
+  },
+  "MNT": {
+   "lt_hours": 11201,
+   "as_payouts": 0,
+   "lt_symbol": 63,
+   "as_symbol": null
+  },
+  "DOT": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 11,
+   "as_symbol": "DOTUSDT"
+  },
+  "ICP": {
+   "lt_hours": 9136,
+   "as_payouts": 7560,
+   "lt_symbol": 102,
+   "as_symbol": "ICPUSDT"
+  },
+  "MORPHO": {
+   "lt_hours": 11056,
+   "as_payouts": 3529,
+   "lt_symbol": 68,
+   "as_symbol": "MORPHOUSDT"
+  },
+  "ETC": {
+   "lt_hours": 0,
+   "as_payouts": 2191,
+   "lt_symbol": null,
+   "as_symbol": "ETCUSDT"
+  },
+  "WLD": {
+   "lt_hours": 16218,
+   "as_payouts": 2191,
+   "lt_symbol": 6,
+   "as_symbol": "WLDUSDT"
+  },
+  "PUMP": {
+   "lt_hours": 11942,
+   "as_payouts": 3015,
+   "lt_symbol": 45,
+   "as_symbol": "PUMPUSDT"
+  },
+  "POL": {
+   "lt_hours": 16218,
+   "as_payouts": 6319,
+   "lt_symbol": 14,
+   "as_symbol": "POLUSDT"
+  },
+  "ARB": {
+   "lt_hours": 11609,
+   "as_payouts": 2191,
+   "lt_symbol": 50,
+   "as_symbol": "ARBUSDT"
+  },
+  "JUP": {
+   "lt_hours": 15295,
+   "as_payouts": 6319,
+   "lt_symbol": 26,
+   "as_symbol": "JUPUSDT"
+  },
+  "ALGO": {
+   "lt_hours": 0,
+   "as_payouts": 6471,
+   "lt_symbol": null,
+   "as_symbol": "ALGOUSDT"
+  },
+  "RENDER": {
+   "lt_hours": 0,
+   "as_payouts": 6360,
+   "lt_symbol": null,
+   "as_symbol": "RENDERUSDT"
+  },
+  "ATOM": {
+   "lt_hours": 0,
+   "as_payouts": 2191,
+   "lt_symbol": null,
+   "as_symbol": "ATOMUSDT"
+  },
+  "INJ": {
+   "lt_hours": 0,
+   "as_payouts": 2191,
+   "lt_symbol": null,
+   "as_symbol": "INJUSDT"
+  },
+  "STX": {
+   "lt_hours": 0,
+   "as_payouts": 6869,
+   "lt_symbol": null,
+   "as_symbol": "STXUSDT"
+  },
+  "CAKE": {
+   "lt_hours": 0,
+   "as_payouts": 4380,
+   "lt_symbol": null,
+   "as_symbol": "CAKEUSDT"
+  },
+  "ETHFI": {
+   "lt_hours": 11201,
+   "as_payouts": 6319,
+   "lt_symbol": 64,
+   "as_symbol": "ETHFIUSDT"
+  },
+  "FIL": {
+   "lt_hours": 9136,
+   "as_payouts": 8341,
+   "lt_symbol": 103,
+   "as_symbol": "FILUSDT"
+  },
+  "DASH": {
+   "lt_hours": 7342,
+   "as_payouts": 7571,
+   "lt_symbol": 127,
+   "as_symbol": "DASHUSDT"
+  },
+  "ZRO": {
+   "lt_hours": 11345,
+   "as_payouts": 5967,
+   "lt_symbol": 60,
+   "as_symbol": "ZROUSDT"
+  },
+  "PYTH": {
+   "lt_hours": 10604,
+   "as_payouts": 4380,
+   "lt_symbol": 78,
+   "as_symbol": "PYTHUSDT"
+  },
+  "APT": {
+   "lt_hours": 14864,
+   "as_payouts": 2191,
+   "lt_symbol": 31,
+   "as_symbol": "APTUSDT"
+  },
+  "TIA": {
+   "lt_hours": 11056,
+   "as_payouts": 7880,
+   "lt_symbol": 67,
+   "as_symbol": "TIAUSDT"
+  },
+  "CRV": {
+   "lt_hours": 13904,
+   "as_payouts": 2191,
+   "lt_symbol": 36,
+   "as_symbol": "CRVUSDT"
+  },
+  "PENGU": {
+   "lt_hours": 11734,
+   "as_payouts": 2967,
+   "lt_symbol": 47,
+   "as_symbol": "PENGUUSDT"
+  },
+  "GRASS": {
+   "lt_hours": 11583,
+   "as_payouts": 7476,
+   "lt_symbol": 52,
+   "as_symbol": "GRASSUSDT"
+  },
+  "SPX": {
+   "lt_hours": 12683,
+   "as_payouts": 6319,
+   "lt_symbol": 42,
+   "as_symbol": "SPXUSDT"
+  },
+  "FET": {
+   "lt_hours": 0,
+   "as_payouts": 6869,
+   "lt_symbol": null,
+   "as_symbol": "FETUSDT"
+  },
+  "TRUMP": {
+   "lt_hours": 15897,
+   "as_payouts": 3441,
+   "lt_symbol": 15,
+   "as_symbol": "TRUMPUSDT"
+  },
+  "STRK": {
+   "lt_hours": 9136,
+   "as_payouts": 7880,
+   "lt_symbol": 104,
+   "as_symbol": "STRKUSDT"
+  },
+  "VIRTUAL": {
+   "lt_hours": 12683,
+   "as_payouts": 6369,
+   "lt_symbol": 41,
+   "as_symbol": "VIRTUALUSDT"
+  },
+  "SEI": {
+   "lt_hours": 14864,
+   "as_payouts": 2191,
+   "lt_symbol": 32,
+   "as_symbol": "SEIUSDT"
+  },
+  "PENDLE": {
+   "lt_hours": 13904,
+   "as_payouts": 6869,
+   "lt_symbol": 37,
+   "as_symbol": "PENDLEUSDT"
+  },
+  "XPL": {
+   "lt_hours": 10913,
+   "as_payouts": 2735,
+   "lt_symbol": 71,
+   "as_symbol": "XPLUSDT"
+  },
+  "LDO": {
+   "lt_hours": 11734,
+   "as_payouts": 7314,
+   "lt_symbol": 46,
+   "as_symbol": "LDOUSDT"
+  },
+  "BONK": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "COMP": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "RUNE": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "CFX": {
+   "lt_hours": 0,
+   "as_payouts": 4097,
+   "lt_symbol": null,
+   "as_symbol": "CFXUSDT"
+  },
+  "OP": {
+   "lt_hours": 11583,
+   "as_payouts": 2191,
+   "lt_symbol": 55,
+   "as_symbol": "OPUSDT"
+  },
+  "FLOKI": {
+   "lt_hours": 0,
+   "as_payouts": 0,
+   "lt_symbol": null,
+   "as_symbol": null
+  },
+  "ENS": {
+   "lt_hours": 0,
+   "as_payouts": 4297,
+   "lt_symbol": null,
+   "as_symbol": "ENSUSDT"
+  },
+  "JTO": {
+   "lt_hours": 7003,
+   "as_payouts": 5250,
+   "lt_symbol": 134,
+   "as_symbol": "JTOUSDT"
+  }
+ },
+ "selected": [
+  "AAVE",
+  "ADA",
+  "ALGO",
+  "APT",
+  "ARB",
+  "ASTER",
+  "ATOM",
+  "AVAX",
+  "BCH",
+  "BNB",
+  "BONK",
+  "BTC",
+  "CAKE",
+  "CFX",
+  "COMP",
+  "CRV",
+  "DASH",
+  "DOGE",
+  "DOT",
+  "ENA",
+  "ENS",
+  "ETC",
+  "ETH",
+  "ETHFI",
+  "FET",
+  "FIL",
+  "FLOKI",
+  "GRASS",
+  "HBAR",
+  "HYPE",
+  "ICP",
+  "INJ",
+  "JTO",
+  "JUP",
+  "KAS",
+  "LDO",
+  "LINK",
+  "LTC",
+  "MNT",
+  "MORPHO",
+  "NEAR",
+  "ONDO",
+  "OP",
+  "PAXG",
+  "PENDLE",
+  "PENGU",
+  "PEPE",
+  "POL",
+  "PUMP",
+  "PYTH",
+  "RENDER",
+  "RUNE",
+  "SEI",
+  "SHIB",
+  "SOL",
+  "SPX",
+  "STRK",
+  "STX",
+  "SUI",
+  "TAO",
+  "TIA",
+  "TRUMP",
+  "TRX",
+  "UNI",
+  "VIRTUAL",
+  "WLD",
+  "WLFI",
+  "XLM",
+  "XMR",
+  "XPL",
+  "XRP",
+  "ZEC",
+  "ZRO"
+ ],
+ "pass2": {
+  "AAVE": {
+   "lt_candles": 15104,
+   "as_candles": 17528
+  },
+  "ADA": {
+   "lt_candles": 13400,
+   "as_candles": 17528
+  },
+  "ALGO": {
+   "lt_candles": 0,
+   "as_candles": 4723
+  },
+  "APT": {
+   "lt_candles": 14884,
+   "as_candles": 17528
+  },
+  "ARB": {
+   "lt_candles": 11625,
+   "as_candles": 17528
+  },
+  "ASTER": {
+   "lt_candles": 10377,
+   "as_candles": 10382
+  },
+  "ATOM": {
+   "lt_candles": 0,
+   "as_candles": 17528
+  },
+  "AVAX": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "BCH": {
+   "lt_candles": 11361,
+   "as_candles": 17528
+  },
+  "BNB": {
+   "lt_candles": 15316,
+   "as_candles": 17528
+  },
+  "BONK": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "BTC": {
+   "lt_candles": 16240,
+   "as_candles": 17528
+  },
+  "CAKE": {
+   "lt_candles": 0,
+   "as_candles": 17528
+  },
+  "CFX": {
+   "lt_candles": 0,
+   "as_candles": 4867
+  },
+  "COMP": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "CRV": {
+   "lt_candles": 13923,
+   "as_candles": 17528
+  },
+  "DASH": {
+   "lt_candles": 7353,
+   "as_candles": 9306
+  },
+  "DOGE": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "DOT": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "ENA": {
+   "lt_candles": 15104,
+   "as_candles": 13123
+  },
+  "ENS": {
+   "lt_candles": 0,
+   "as_candles": 5089
+  },
+  "ETC": {
+   "lt_candles": 0,
+   "as_candles": 17528
+  },
+  "ETH": {
+   "lt_candles": 16240,
+   "as_candles": 17528
+  },
+  "ETHFI": {
+   "lt_candles": 11216,
+   "as_candles": 7674
+  },
+  "FET": {
+   "lt_candles": 0,
+   "as_candles": 7670
+  },
+  "FIL": {
+   "lt_candles": 9150,
+   "as_candles": 9185
+  },
+  "FLOKI": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "GRASS": {
+   "lt_candles": 11599,
+   "as_candles": 8874
+  },
+  "HBAR": {
+   "lt_candles": 11361,
+   "as_candles": 7674
+  },
+  "HYPE": {
+   "lt_candles": 15316,
+   "as_candles": 10291
+  },
+  "ICP": {
+   "lt_candles": 9150,
+   "as_candles": 9185
+  },
+  "INJ": {
+   "lt_candles": 0,
+   "as_candles": 17528
+  },
+  "JTO": {
+   "lt_candles": 7013,
+   "as_candles": 6694
+  },
+  "JUP": {
+   "lt_candles": 15316,
+   "as_candles": 7674
+  },
+  "KAS": {
+   "lt_candles": 0,
+   "as_candles": 7100
+  },
+  "LDO": {
+   "lt_candles": 11750,
+   "as_candles": 7670
+  },
+  "LINK": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "LTC": {
+   "lt_candles": 14551,
+   "as_candles": 17528
+  },
+  "MNT": {
+   "lt_candles": 11216,
+   "as_candles": 0
+  },
+  "MORPHO": {
+   "lt_candles": 11071,
+   "as_candles": 5000
+  },
+  "NEAR": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "ONDO": {
+   "lt_candles": 13923,
+   "as_candles": 17528
+  },
+  "OP": {
+   "lt_candles": 11599,
+   "as_candles": 17528
+  },
+  "PAXG": {
+   "lt_candles": 11625,
+   "as_candles": 6434
+  },
+  "PENDLE": {
+   "lt_candles": 13923,
+   "as_candles": 7670
+  },
+  "PENGU": {
+   "lt_candles": 11750,
+   "as_candles": 11876
+  },
+  "PEPE": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "POL": {
+   "lt_candles": 16227,
+   "as_candles": 7674
+  },
+  "PUMP": {
+   "lt_candles": 11959,
+   "as_candles": 12068
+  },
+  "PYTH": {
+   "lt_candles": 10619,
+   "as_candles": 17528
+  },
+  "RENDER": {
+   "lt_candles": 0,
+   "as_candles": 7747
+  },
+  "RUNE": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "SEI": {
+   "lt_candles": 14884,
+   "as_candles": 17528
+  },
+  "SHIB": {
+   "lt_candles": 0,
+   "as_candles": 0
+  },
+  "SOL": {
+   "lt_candles": 16240,
+   "as_candles": 17528
+  },
+  "SPX": {
+   "lt_candles": 12701,
+   "as_candles": 7674
+  },
+  "STRK": {
+   "lt_candles": 9150,
+   "as_candles": 7670
+  },
+  "STX": {
+   "lt_candles": 0,
+   "as_candles": 7670
+  },
+  "SUI": {
+   "lt_candles": 15891,
+   "as_candles": 17528
+  },
+  "TAO": {
+   "lt_candles": 16227,
+   "as_candles": 7674
+  },
+  "TIA": {
+   "lt_candles": 11071,
+   "as_candles": 7670
+  },
+  "TRUMP": {
+   "lt_candles": 15919,
+   "as_candles": 13771
+  },
+  "TRX": {
+   "lt_candles": 12272,
+   "as_candles": 17528
+  },
+  "UNI": {
+   "lt_candles": 15104,
+   "as_candles": 17528
+  },
+  "VIRTUAL": {
+   "lt_candles": 12701,
+   "as_candles": 7754
+  },
+  "WLD": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "WLFI": {
+   "lt_candles": 10928,
+   "as_candles": 11009
+  },
+  "XLM": {
+   "lt_candles": 8355,
+   "as_candles": 17528
+  },
+  "XMR": {
+   "lt_candles": 10619,
+   "as_candles": 7576
+  },
+  "XPL": {
+   "lt_candles": 10928,
+   "as_candles": 10944
+  },
+  "XRP": {
+   "lt_candles": 16227,
+   "as_candles": 17528
+  },
+  "ZEC": {
+   "lt_candles": 10022,
+   "as_candles": 10050
+  },
+  "ZRO": {
+   "lt_candles": 11361,
+   "as_candles": 7344
+  }
+ },
+ "lighter_map": {
+  "BTC": 1,
+  "ETH": 0,
+  "SOL": 2,
+  "XRP": 7,
+  "DOGE": 3,
+  "PEPE": null,
+  "KAS": null,
+  "SUI": 16,
+  "LINK": 8,
+  "AVAX": 9,
+  "BNB": 25,
+  "TRX": 43,
+  "HYPE": 24,
+  "ZEC": 90,
+  "XMR": 77,
+  "ADA": 39,
+  "XLM": 119,
+  "BCH": 58,
+  "NEAR": 10,
+  "LTC": 35,
+  "UNI": 30,
+  "HBAR": 59,
+  "TAO": 13,
+  "SHIB": null,
+  "PAXG": 48,
+  "AAVE": 27,
+  "ONDO": 38,
+  "ENA": 29,
+  "WLFI": 72,
+  "ASTER": 83,
+  "MNT": 63,
+  "DOT": 11,
+  "ICP": 102,
+  "MORPHO": 68,
+  "ETC": null,
+  "WLD": 6,
+  "PUMP": 45,
+  "POL": 14,
+  "ARB": 50,
+  "JUP": 26,
+  "ALGO": null,
+  "RENDER": null,
+  "ATOM": null,
+  "INJ": null,
+  "STX": null,
+  "CAKE": null,
+  "ETHFI": 64,
+  "FIL": 103,
+  "DASH": 127,
+  "ZRO": 60,
+  "PYTH": 78,
+  "APT": 31,
+  "TIA": 67,
+  "CRV": 36,
+  "PENGU": 47,
+  "GRASS": 52,
+  "SPX": 42,
+  "FET": null,
+  "TRUMP": 15,
+  "STRK": 104,
+  "VIRTUAL": 41,
+  "SEI": 32,
+  "PENDLE": 37,
+  "XPL": 71,
+  "LDO": 46,
+  "BONK": null,
+  "COMP": null,
+  "RUNE": null,
+  "CFX": null,
+  "OP": 55,
+  "FLOKI": null,
+  "ENS": null,
+  "JTO": 134
+ },
+ "aster_map": {
+  "BTC": "BTCUSDT",
+  "ETH": "ETHUSDT",
+  "SOL": "SOLUSDT",
+  "XRP": "XRPUSDT",
+  "DOGE": "DOGEUSDT",
+  "PEPE": null,
+  "KAS": "KASUSDT",
+  "SUI": "SUIUSDT",
+  "LINK": "LINKUSDT",
+  "AVAX": "AVAXUSDT",
+  "BNB": "BNBUSDT",
+  "TRX": "TRXUSDT",
+  "HYPE": "HYPEUSDT",
+  "ZEC": "ZECUSDT",
+  "XMR": "XMRUSDT",
+  "ADA": "ADAUSDT",
+  "XLM": "XLMUSDT",
+  "BCH": "BCHUSDT",
+  "NEAR": "NEARUSDT",
+  "LTC": "LTCUSDT",
+  "UNI": "UNIUSDT",
+  "HBAR": "HBARUSDT",
+  "TAO": "TAOUSDT",
+  "SHIB": null,
+  "PAXG": "PAXGUSDT",
+  "AAVE": "AAVEUSDT",
+  "ONDO": "ONDOUSDT",
+  "ENA": "ENAUSDT",
+  "WLFI": "WLFIUSDT",
+  "ASTER": "ASTERUSDT",
+  "MNT": null,
+  "DOT": "DOTUSDT",
+  "ICP": "ICPUSDT",
+  "MORPHO": "MORPHOUSDT",
+  "ETC": "ETCUSDT",
+  "WLD": "WLDUSDT",
+  "PUMP": "PUMPUSDT",
+  "POL": "POLUSDT",
+  "ARB": "ARBUSDT",
+  "JUP": "JUPUSDT",
+  "ALGO": "ALGOUSDT",
+  "RENDER": "RENDERUSDT",
+  "ATOM": "ATOMUSDT",
+  "INJ": "INJUSDT",
+  "STX": "STXUSDT",
+  "CAKE": "CAKEUSDT",
+  "ETHFI": "ETHFIUSDT",
+  "FIL": "FILUSDT",
+  "DASH": "DASHUSDT",
+  "ZRO": "ZROUSDT",
+  "PYTH": "PYTHUSDT",
+  "APT": "APTUSDT",
+  "TIA": "TIAUSDT",
+  "CRV": "CRVUSDT",
+  "PENGU": "PENGUUSDT",
+  "GRASS": "GRASSUSDT",
+  "SPX": "SPXUSDT",
+  "FET": "FETUSDT",
+  "TRUMP": "TRUMPUSDT",
+  "STRK": "STRKUSDT",
+  "VIRTUAL": "VIRTUALUSDT",
+  "SEI": "SEIUSDT",
+  "PENDLE": "PENDLEUSDT",
+  "XPL": "XPLUSDT",
+  "LDO": "LDOUSDT",
+  "BONK": null,
+  "COMP": null,
+  "RUNE": null,
+  "CFX": "CFXUSDT",
+  "OP": "OPUSDT",
+  "FLOKI": null,
+  "ENS": "ENSUSDT",
+  "JTO": "JTOUSDT"
+ }
+}
