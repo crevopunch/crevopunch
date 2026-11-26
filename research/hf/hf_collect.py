@@ -18,7 +18,8 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, 'data')
-DURATION = 24 * 3600
+import os
+DURATION = int(os.environ.get("HF_DURATION", 24 * 3600))
 COINS = ('BTC ETH SOL XRP DOGE BNB HYPE ASTER WLFI SUI LINK AVAX PEPE KAS VVV PUMP JUP '
          'MORPHO ONDO CRO ENA TAO WLD LTC SKY').split()
 VENUES = ['OKX', 'Kraken', 'Hyperliquid', 'Aster', 'Lighter']

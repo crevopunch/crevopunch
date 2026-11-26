@@ -1,3 +1,15 @@
 2026-11-25T19:07:37Z venue coverage: OKX=24 Kraken=23 Hyperliquid=24 Aster=24 Lighter=24
 2026-11-25T19:07:37Z coins kept (25): BTC ETH SOL XRP DOGE BNB HYPE ASTER WLFI SUI LINK AVAX PEPE KAS VVV PUMP JUP MORPHO ONDO CRO ENA TAO WLD LTC SKY
 2026-11-25T19:07:42Z HB rows OKX=72 Kraken=69 Hyperliquid=32 Aster=72 Lighter=19
+2026-11-25T19:12:42Z HB rows OKX=3672 Kraken=3519 Hyperliquid=1907 Aster=3672 Lighter=1220
+2026-11-25T19:14:35Z ERR Hyperliquid SOL: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1035)> (suppressed=0)
+2026-11-25T19:14:35Z ERR Hyperliquid AVAX: URLError: <urlopen error Remote end closed connection without response> (suppressed=0)
+2026-11-25T19:14:35Z ERR Lighter XRP: RemoteDisconnected: Remote end closed connection without response (suppressed=0)
+2026-11-25T19:14:35Z ERR Hyperliquid ETH: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1035)> (suppressed=0)
+2026-11-25T19:14:35Z ERR Hyperliquid BTC: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1035)> (suppressed=0)
+2026-11-25T19:14:35Z ERR Lighter PUMP: RemoteDisconnected: Remote end closed connection without response (suppressed=0)
+2026-11-25T19:14:36Z ERR Lighter VVV: URLError: <urlopen error [Errno 111] Connection refused> (suppressed=0)
+2026-11-25T19:14:36Z ERR Lighter CRO: URLError: <urlopen error [Errno 111] Connection refused> (suppressed=0)
+2026-11-26T01:11:33Z venue coverage: OKX=24 Kraken=23 Hyperliquid=24 Aster=24 Lighter=24
+2026-11-26T01:11:33Z coins kept (25): BTC ETH SOL XRP DOGE BNB HYPE ASTER WLFI SUI LINK AVAX PEPE KAS VVV PUMP JUP MORPHO ONDO CRO ENA TAO WLD LTC SKY
+2026-11-26T01:11:38Z HB rows OKX=72 Kraken=69 Hyperliquid=32 Aster=72 Lighter=20
