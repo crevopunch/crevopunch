@@ -285,3 +285,20 @@ At 1x, A and B end at about $198–208 per coin (+0–4%/yr).
 - **C at 3x is still the only consistently positive setup.** About 61% of its funding comes from rare, extreme hours (above 0.1%/h) on thin Kraken alts. Treat it as an upper bound.
 - **B's best coin at 3x is MNT at every size (+82% to +107%).** That comes from a Kraken funding series with huge spikes (std about 2,050% annualised). It is likely not fillable, so exclude it. The next best are VIRTUAL, BONK, LDO, ALGO and NEAR, at about +13% to +21%/yr.
 - **Caveat:** the C and D simulations have no 10% stop-out; only A and B do.
+
+## 9. High-frequency spread strategies (8h order-book recording, 2026-11-26 01:11–09:06 UTC)
+
+Data: about 1.4M quotes on 25 coins across OKX, Kraken, Aster, HL and Lighter, polled every 2–6s. Fills are executable at $100, $1k and $10k depth. Maker fills count only when the market trades through the quote; hedges execute at the next quote. Script: `hf/spread_hf.py`; full results: `hf/summary_hf.md`.
+
+| Strategy | Best config | $/day at $100 / $1k / $10k | Verdict |
+|---|---|---|---|
+| S1 taker convergence | HL↔Lighter, enter when spread > fees + 5 bp | +17 / +177 / +337 | Almost entirely **VVV** (one thin coin, one day). Not robust. |
+| S2 z-score reversion | Aster↔Lighter maker-maker, \|z\|>3 | +8 / taker −2.4k / −3.6k | The taker version loses 16–20 bp per trade. |
+| S3 maker-hedge (Aster maker + Lighter taker) | 10 bp offset | −333 / −3.8k / −36k | **Adverse selection kills it**: −6 bp per fill. |
+| S4 OKX lead-lag | OKX move >10bp in 5s → trade Lighter, 10s hold | +97 / −333 / −693 | +1.3 bp per trade at $100 only, eaten by slippage at size. |
+| S5 funding windows | — | — | Spreads within 0.3 bp of normal. No edge. |
+
+**Conclusion:** after fees and realistic fills, cross-venue spread trading does not robustly beat costs at retail size.
+- The few positive cells are one coin (VVV) in one sample.
+- Maker strategies only get filled when price moves against them.
+- The only lead worth further testing is S1 on volatile thin alts (HL vs Lighter). It needs a multi-day out-of-sample recording before any money goes in.
